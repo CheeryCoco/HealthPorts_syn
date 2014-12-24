@@ -17,8 +17,8 @@ public class Parse {
 		File path = new File("src/files"); //path to your folder. eg. C:\\P4logs
 		for(File f: path.listFiles()) { // this loops through all the files + directories
 		    if(f.isFile() && !f.isHidden()) { // checks if it is a file, not a directory           
-		    	System.out.println(f);
-		    	System.out.println("Hello Eclipse!");    
+		    	//System.out.println(f);
+		    	//System.out.println("Hello Eclipse!");    
 		    	readFile(f);
 		    }
 		}
