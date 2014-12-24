@@ -1,0 +1,1409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="CCD.xsl"?>
+<!--Copyright EXACTDATA, LLC. ALL RIGHTS RESERVED.-->
+<!--This file contains synthetic data depicting a fictional health summary. Any resemblance to a real person is coincidental.-->
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://xreg2.nist.gov:8080/hitspValidation/schema/cdar2c32/infrastructure/cda/C32_CDA.xsd" xmlns="urn:hl7-org:v3">
+    <realmCode code="US" />
+    <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+    <templateId root="2.16.840.1.113883.10.20.3" />
+    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1" />
+    <templateId root="2.16.840.1.113883.3.88.11.32.1" assigningAuthorityName="HITSP/C32" />
+    <id root="247859D6-47D8-43B4-8F50-31BD145C9A56" />
+    <code code="34133-9" codeSystem="2.16.840.1.113883.6.1" displayName="Summarization of episode note" />
+    <title>Continuity of Care Document</title>
+    <effectiveTime value="20110202" />
+    <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" />
+    <languageCode code="en-US" />
+    <recordTarget>
+        <patientRole>
+            <id extension="000-03-2621" root="2.16.840.1.113883.4.450.579" />
+            <addr use="HP">
+                <streetAddressLine>712-4339 Vassar Drive</streetAddressLine>
+                <city>Northeast Harbor</city>
+                <state>ME</state>
+                <postalCode>04662</postalCode>
+            </addr>
+            <telecom value="tel:+1-207-880-1208" use="HP" />
+            <patient>
+                <name>
+                    <given>Marcia</given>
+                    <given>Ora</given>
+                    <family>Barnett</family>
+                </name>
+                <administrativeGenderCode code="F" displayName="Female" codeSystemName="HL7 AdministrativeGenderCodes" codeSystem="2.16.840.1.113883.5.1" />
+                <birthTime value="19700416" />
+                <maritalStatusCode code="S" displayName="Never Married" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatusCode" />
+                <raceCode nullFlavor="UNK" codeSystem="2.16.840.1.113883.6.238" />
+                <languageCommunication>
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.1" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.3.88.11.83.2" assigningAuthorityName="HITSP C83" />
+                    <languageCode code="en-US" />
+                    <preferenceInd value="true" />
+                </languageCommunication>
+                <languageCommunication>
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.1" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.3.88.11.83.2" assigningAuthorityName="HITSP C83" />
+                    <languageCode code="en-US" />
+                    <preferenceInd value="true" />
+                </languageCommunication>
+            </patient>
+        </patientRole>
+    </recordTarget>
+    <author>
+        <time value="20110202" />
+        <assignedAuthor>
+            <id extension="4433036027" root="2.16.840.1.113883.4.6" />
+            <addr use="WP">
+                <streetAddressLine>300 Main Street</streetAddressLine>
+                <city>Lewiston</city>
+                <state>ME</state>
+                <postalCode>04240</postalCode>
+            </addr>
+            <telecom value="tel:+1-712-835-0143" use="WP" />
+            <assignedPerson>
+                <realmCode code="US" />
+                <name>
+                    <given>Colette</given>
+                    <family>Alvarado</family>
+                    <suffix>MD</suffix>
+                </name>
+            </assignedPerson>
+            <representedOrganization>
+                <id root="2.16.840.1.113883.4.450.579" />
+                <name>Middlesex Exact Data Medical Group</name>
+                <telecom value="tel:+1-712-835-0143" use="WP" />
+                <addr use="WP">
+                    <streetAddressLine>300 Main Street</streetAddressLine>
+                    <city>Lewiston</city>
+                    <state>ME</state>
+                    <postalCode>04240</postalCode>
+                </addr>
+            </representedOrganization>
+        </assignedAuthor>
+    </author>
+    <custodian>
+        <assignedCustodian>
+            <representedCustodianOrganization>
+                <id root="2.16.840.1.113883.4.450.579" />
+                <name>Middlesex Exact Data Medical Group</name>
+                <telecom value="tel:+1-712-835-0143" use="WP" />
+                <addr>
+                    <streetAddressLine>300 Main Street</streetAddressLine>
+                    <city>Lewiston</city>
+                    <state>ME</state>
+                    <postalCode>04240</postalCode>
+                </addr>
+            </representedCustodianOrganization>
+        </assignedCustodian>
+    </custodian>
+    <participant typeCode="IND">
+        <templateId root="2.16.840.1.113883.3.88.11.83.3" />
+        <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.4" />
+        <time value="20110202000000-0500" />
+        <associatedEntity classCode="AGNT">
+            <code code="FRND" displayName="Unrelated Friend" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" />
+            <addr use="HP">
+                <streetAddressLine>712-4339 Vassar Drive</streetAddressLine>
+                <city>Northeast Harbor</city>
+                <state>ME</state>
+                <postalCode>04662</postalCode>
+            </addr>
+            <telecom value="tel:+1-207-880-1208" use="HP" />
+            <associatedPerson>
+                <name>
+                    <given>Karen</given>
+                    <family>Mcmahonn</family>
+                </name>
+            </associatedPerson>
+        </associatedEntity>
+    </participant>
+    <documentationOf>
+        <serviceEvent classCode="PCPR">
+            <effectiveTime>
+                <low value="20110202" />
+                <high value="20110202" />
+            </effectiveTime>
+            <performer typeCode="PRF">
+                <templateId root="2.16.840.1.113883.3.88.11.83.4" />
+                <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.3" />
+                <functionCode code="PP" displayName="Primary Care Provider" codeSystem="2.16.840.1.113883.12.443" codeSystemName="Provider Role">
+                    <originalText>Primary Care Provider</originalText>
+                </functionCode>
+                <time>
+                    <low value="20110131" />
+                    <high value="20110131" />
+                </time>
+                <assignedEntity>
+                    <id extension="3773470344" root="2.16.840.1.113883.4.6" />
+                    <code code="200000000X" displayName="Allopathic and Osteopathic Physicians" codeSystem="2.16.840.1.113883.6.101" codeSystemName="ProviderCodes" />
+                    <addr use="WP">
+                        <streetAddressLine>420 Franklin Street</streetAddressLine>
+                        <city>Rumford</city>
+                        <state>ME</state>
+                        <postalCode>04276</postalCode>
+                    </addr>
+                    <telecom value="tel:+1-607-642-7527" use="WP" />
+                    <assignedPerson>
+                        <name>
+                            <given>Ivana</given>
+                            <family>Dyer</family>
+                            <suffix>RN</suffix>
+                        </name>
+                    </assignedPerson>
+                    <representedOrganization>
+                        <id root="2.16.840.1.113883.4.450.579" />
+                        <name>Salt Lake City Community Health</name>
+                        <telecom value="tel:+1-607-642-7527" use="WP" />
+                        <addr use="WP">
+                            <streetAddressLine>420 Franklin Street</streetAddressLine>
+                            <city>Rumford</city>
+                            <state>ME</state>
+                            <postalCode>04276</postalCode>
+                        </addr>
+                    </representedOrganization>
+                </assignedEntity>
+            </performer>
+            <performer typeCode="PRF">
+                <templateId root="2.16.840.1.113883.3.88.11.83.4" />
+                <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.3" />
+                <functionCode code="CP" displayName="Consulting Provider" codeSystem="2.16.840.1.113883.12.443" codeSystemName="Provider Role">
+                    <originalText>Consulting Provider</originalText>
+                </functionCode>
+                <time>
+                    <low value="20110202" />
+                    <high value="20110202" />
+                </time>
+                <assignedEntity>
+                    <id extension="4433036027" root="2.16.840.1.113883.4.6" />
+                    <code code="200000000X" displayName="Allopathic and Osteopathic Physicians" codeSystem="2.16.840.1.113883.6.101" codeSystemName="ProviderCodes" />
+                    <addr use="WP">
+                        <streetAddressLine>300 Main Street</streetAddressLine>
+                        <city>Lewiston</city>
+                        <state>ME</state>
+                        <postalCode>04240</postalCode>
+                    </addr>
+                    <telecom value="tel:+1-712-835-0143" use="WP" />
+                    <assignedPerson>
+                        <name>
+                            <given>Colette</given>
+                            <family>Alvarado</family>
+                            <suffix>MD</suffix>
+                        </name>
+                    </assignedPerson>
+                    <representedOrganization>
+                        <id root="2.16.840.1.113883.4.450.579" />
+                        <name>Middlesex Exact Data Medical Group</name>
+                        <telecom value="tel:+1-712-835-0143" use="WP" />
+                        <addr use="WP">
+                            <streetAddressLine>300 Main Street</streetAddressLine>
+                            <city>Lewiston</city>
+                            <state>ME</state>
+                            <postalCode>04240</postalCode>
+                        </addr>
+                    </representedOrganization>
+                </assignedEntity>
+            </performer>
+        </serviceEvent>
+    </documentationOf>
+    <component>
+        <structuredBody>
+            <component>
+                <!--Problems Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.3.88.11.83.103" assigningAuthorityName="HITSP/C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.6" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.10.20.1.11" assigningAuthorityName="HL7 CCD" />
+                    <!--Problem section template-->
+                    <code code="11450-4" displayName="Problems" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                    <title>Problems</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <tbody>
+                                <tr ID="problem-1">
+                                    <td>Problem</td>
+                                    <td>Breast Cancer</td>
+                                </tr>
+                                <tr>
+                                    <td>Doctor's Notes</td>
+                                    <td>s:40 year old female presents with denies breast pain or discharge mild,breast mass mild,eczamatoid lesion in the areola oh her right breast mild x the last 1 days o:Height 154 cm,Weight 50.2 kg,Temperature 36.3 C,Pulse 80 bpm,DiastolicBP 80 ,SystolicBP 120 ,Respiration 16 bpm Skin = warm, dry a:Breast Cancer p:prescribe trastuzumab - 4 mg/kg; IV and schedule lumpectomy - breast,Sentinel lymph node biopsy - breast</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <act classCode="ACT" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.10.20.1.27" assigningAuthorityName="CCD" />
+                            <templateId root="2.16.840.1.113883.3.88.11.32.7" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.3.88.11.83.7" assigningAuthorityName="HITSP C83" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" assigningAuthorityName="IHE PCC" />
+                            <!--Problem act template-->
+                            <id root="2D2524F1-AE5F-4C21-8767-1F8F154ABDC0" />
+                            <code nullFlavor="NA" />
+                            <statusCode code="completed" />
+                            <effectiveTime>
+                                <low value="20110202" />
+                                <high value="20110202" />
+                            </effectiveTime>
+                            <entryRelationship typeCode="SUBJ" inversionInd="false">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.28" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" assigningAuthorityName="IHE PCC" />
+                                    <!--Problem observation template-->
+                                    <id root="2D2524F1-AE5F-4C21-8767-1F8F154ABDC0" />
+                                    <code code="282291009" displayName="Diagnosis" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <text>
+                                        <reference value="#problem-1" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime>
+                                        <low value="20110202" />
+                                        <high value="20110202" />
+                                    </effectiveTime>
+                                    <value xsi:type="CD" code="126926005" displayName="Breast Cancer" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                        <translation code="174.9" displayName="Breast Cancer" codeSystemName="ICD9" codeSystem="2.16.840.1.113883.6.103" />
+                                    </value>
+                                    <performer typeCode="PRF">
+                                        <time>
+                                            <low value="20110202" />
+                                            <high value="20110202" />
+                                        </time>
+                                        <assignedEntity>
+                                            <id extension="4433036027" root="2.16.840.1.113883.4.6" />
+                                            <addr use="WP">
+                                                <streetAddressLine>300 Main Street</streetAddressLine>
+                                                <city>Lewiston</city>
+                                                <state>ME</state>
+                                                <postalCode>04240</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-712-835-0143" use="WP" />
+                                            <assignedPerson>
+                                                <name>
+                                                    <given>Colette</given>
+                                                    <family>Alvarado</family>
+                                                    <suffix>MD</suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id root="2.16.840.1.113883.4.450.579" />
+                                                <name>Middlesex Exact Data Medical Group</name>
+                                                <telecom value="tel:+1-712-835-0143" use="WP" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>300 Main Street</streetAddressLine>
+                                                    <city>Lewiston</city>
+                                                    <state>ME</state>
+                                                    <postalCode>04240</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                    <entryRelationship typeCode="REFR" inversionInd="false">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="2.16.840.1.113883.10.20.1.50" assigningAuthorityName="CCD" />
+                                            <templateId root="2.16.840.1.113883.10.20.1.57" assigningAuthorityName="CCD" />
+                                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1.1" assigningAuthorityName="IHE PCC" />
+                                            <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                                            <text>Active<reference value="#problem-1" /></text>
+                                            <statusCode code="completed" />
+                                            <value xsi:type="CE" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </entryRelationship>
+                        </act>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Medications Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.3.88.11.83.112" assigningAuthorityName="HITSP/C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.19" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.10.20.1.8" assigningAuthorityName="HL7 CCD" />
+                    <code code="10160-0" displayName="History of medication use" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                    <title>Medications</title>
+                    <text>
+                        <list listType="unordered">
+                            <item>
+                                <content ID="med1">Medication: trastuzumab<br />Instructions: 4 mg/kg; IV<br />Status: Active</content>
+                            </item>
+                        </list>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="5E3F9F51-859E-4577-83C5-BB9C3D1C2A62" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20110202" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="4" unit="mg/kg" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="806575" displayName="trastuzumab 4 mg/kg; IV" codeSystemName="RxNORM" codeSystem="2.16.840.1.113883.6.88">
+                                            <originalText>trastuzumab 4 mg/kg; IV<reference value="#med_" /></originalText>
+                                            <translation code="50242005656" displayName="trastuzumab 4 mg/kg; IV" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69" />
+                                        </code>
+                                        <name>trastuzumab</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="15240007" codeSystem="2.16.840.1.113883.6.96" displayName="Current and verified" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Vital signs Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.10.20.1.16" assigningAuthorityName="HL7 CCD" />
+                    <templateId root="2.16.840.1.113883.3.88.11.83.119" assigningAuthorityName="HITSP/C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2" assigningAuthorityName="IHE PCC" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.25" assigningAuthorityName="IHE PCC" />
+                    <!--Vital Signs section template-->
+                    <code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital signs" />
+                    <title>Vital Signs</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th align="left">Date / Time: </th>
+                                    <td>1/31/2011</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th align="left">Body height</th>
+                                    <td>154,cm</td>
+                                </tr>
+                                <tr>
+                                    <th align="left">Body weight</th>
+                                    <td>50.2,kg</td>
+                                </tr>
+                                <tr>
+                                    <th align="left">Respiration Rate</th>
+                                    <td>16,bpm</td>
+                                </tr>
+                                <tr>
+                                    <th align="left">Pulse</th>
+                                    <td>80,bpm</td>
+                                </tr>
+                                <tr>
+                                    <th align="left">Systolic BP</th>
+                                    <td>120,</td>
+                                </tr>
+                                <tr>
+                                    <th align="left">Diastolic BP</th>
+                                    <td>80,</td>
+                                </tr>
+                                <tr>
+                                    <th align="left">Temperature</th>
+                                    <td>36.3,C</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <organizer classCode="CLUSTER" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.10.20.1.32" assigningAuthorityName="CCD" />
+                            <templateId root="2.16.840.1.113883.10.20.1.35" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.1" assigningAuthorityName="IHE PCC" />
+                            <!--Vital signs organizer template-->
+                            <id root="C2111DDA-8292-4B53-8D15-D6B13EF61906" />
+                            <code code="46680005" codeSystem="2.16.840.1.113883.6.96" displayName="Vital signs" codeSystemName="SNOMED CT" />
+                            <statusCode code="completed" />
+                            <effectiveTime value="20110131" />
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.14" assigningAuthorityName="CCD" />
+                                    <!--Result observation template-->
+                                    <id root="D5797DA7-B064-4895-876E-2F26340F890C" />
+                                    <code code="8302-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Body height" />
+                                    <text>
+                                        <reference value="#vital_D5797DA7-B064-4895-876E-2F26340F890C" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20110131" />
+                                    <value xsi:type="PQ" value="154" unit="[in_us]" />
+                                    <interpretationCode displayName="Normal" codeSystem="2.16.840.1.113883.5.83" />
+                                    <referenceRange>
+                                        <observationRange nullFlavor="UNK" />
+                                    </referenceRange>
+                                </observation>
+                            </component>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.14" assigningAuthorityName="CCD" />
+                                    <!--Result observation template-->
+                                    <id root="2ADE774B-DC8E-42F2-8D00-C4E98737CC6A" />
+                                    <code code="3141-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Body weight" />
+                                    <text>
+                                        <reference value="#vital_2ADE774B-DC8E-42F2-8D00-C4E98737CC6A" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20110131" />
+                                    <value xsi:type="PQ" value="50.2" unit="[lb_av]" />
+                                    <interpretationCode displayName="Normal" codeSystem="2.16.840.1.113883.5.83" />
+                                    <referenceRange>
+                                        <observationRange nullFlavor="UNK" />
+                                    </referenceRange>
+                                </observation>
+                            </component>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.14" assigningAuthorityName="CCD" />
+                                    <!--Result observation template-->
+                                    <id root="0152118A-B1B2-4012-8B4C-12E914C7CBB3" />
+                                    <code code="9279-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="RESPIRATION RATE" />
+                                    <text>
+                                        <reference value="#vital_0152118A-B1B2-4012-8B4C-12E914C7CBB3" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20110131" />
+                                    <value xsi:type="PQ" value="16" unit="/min" />
+                                    <interpretationCode displayName="Normal" codeSystem="2.16.840.1.113883.5.83" />
+                                    <referenceRange>
+                                        <observationRange nullFlavor="UNK" />
+                                    </referenceRange>
+                                </observation>
+                            </component>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.14" assigningAuthorityName="CCD" />
+                                    <!--Result observation template-->
+                                    <id root="FFB169C7-261A-422A-8D5E-4CFCA0A730FB" />
+                                    <code code="8867-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HEART BEAT" />
+                                    <text>
+                                        <reference value="#vital_FFB169C7-261A-422A-8D5E-4CFCA0A730FB" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20110131" />
+                                    <value xsi:type="PQ" value="80" unit="/min" />
+                                    <interpretationCode displayName="Normal" codeSystem="2.16.840.1.113883.5.83" />
+                                    <referenceRange>
+                                        <observationRange nullFlavor="UNK" />
+                                    </referenceRange>
+                                </observation>
+                            </component>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.14" assigningAuthorityName="CCD" />
+                                    <!--Result observation template-->
+                                    <id root="A7D8C355-E686-4F76-8C89-2157A3EE0A2E" />
+                                    <code code="8480-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Systolic BP" />
+                                    <text>
+                                        <reference value="#vital_A7D8C355-E686-4F76-8C89-2157A3EE0A2E" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20110131" />
+                                    <value xsi:type="PQ" value="120" unit="mm[Hg]" />
+                                    <interpretationCode displayName="Normal" codeSystem="2.16.840.1.113883.5.83" />
+                                    <referenceRange>
+                                        <observationRange nullFlavor="UNK" />
+                                    </referenceRange>
+                                </observation>
+                            </component>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.14" assigningAuthorityName="CCD" />
+                                    <!--Result observation template-->
+                                    <id root="311DE482-3E1E-4CF9-8A6A-2DF2FDB62559" />
+                                    <code code="8462-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diastolic BP" />
+                                    <text>
+                                        <reference value="#vital_311DE482-3E1E-4CF9-8A6A-2DF2FDB62559" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20110131" />
+                                    <value xsi:type="PQ" value="80" unit="mm[Hg]" />
+                                    <interpretationCode displayName="Normal" codeSystem="2.16.840.1.113883.5.83" />
+                                    <referenceRange>
+                                        <observationRange nullFlavor="UNK" />
+                                    </referenceRange>
+                                </observation>
+                            </component>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.14" assigningAuthorityName="CCD" />
+                                    <!--Result observation template-->
+                                    <id root="CAC02415-1724-40AB-8516-6F75E6E0C4D6" />
+                                    <code code="8310-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="BODY TEMPERATURE" />
+                                    <text>
+                                        <reference value="#vital_CAC02415-1724-40AB-8516-6F75E6E0C4D6" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20110131" />
+                                    <value xsi:type="PQ" value="36.3" unit="Cel" />
+                                    <interpretationCode displayName="Normal" codeSystem="2.16.840.1.113883.5.83" />
+                                    <referenceRange>
+                                        <observationRange nullFlavor="UNK" />
+                                    </referenceRange>
+                                </observation>
+                            </component>
+                        </organizer>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Procedure Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.10.20.1.12" assigningAuthorityName="CCD" />
+                    <code code="47519-4" displayName="History of procedures" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                    <title>Procedures</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Procedure</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <content ID="Proc1">Brief outpatient consultation</content>
+                                    </td>
+                                    <td>1/31/2011</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="Proc2">Brief outpatient consultation</content>
+                                    </td>
+                                    <td>2/2/2011</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry>
+                        <procedure moodCode="EVN" classCode="PROC">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.17" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.29" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19" assigningAuthorityName="IHE PCC" />
+                            <id root="193CFE52-05AD-4AC7-84CD-29C722D7F368" />
+                            <code code="89.01" displayName="Brief outpatient consultation" codeSystem="2.16.840.1.113883.6.104" codeSystemName="ICD9">
+                                <originalText>
+                                    <reference value="#Proc1" />
+                                </originalText>
+                                <qualifier />
+                            </code>
+                            <text>
+                                <reference value="#Proc1" />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime>
+                                <low value="20110131" />
+                                <high value="20110131" />
+                            </effectiveTime>
+                            <performer>
+                                <assignedEntity>
+                                    <id extension="3773470344" root="2.16.840.1.113883.4.6" />
+                                    <addr use="WP">
+                                        <streetAddressLine>420 Franklin Street</streetAddressLine>
+                                        <city>Rumford</city>
+                                        <state>ME</state>
+                                        <postalCode>04276</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-607-642-7527" use="WP" />
+                                    <assignedPerson>
+                                        <name>
+                                            <given>Ivana</given>
+                                            <family>Dyer</family>
+                                            <suffix>RN</suffix>
+                                        </name>
+                                    </assignedPerson>
+                                    <representedOrganization>
+                                        <id root="2.16.840.1.113883.4.450.579" />
+                                        <name>Salt Lake City Community Health</name>
+                                        <telecom value="tel:+1-607-642-7527" use="WP" />
+                                        <addr use="WP">
+                                            <streetAddressLine>420 Franklin Street</streetAddressLine>
+                                            <city>Rumford</city>
+                                            <state>ME</state>
+                                            <postalCode>04276</postalCode>
+                                        </addr>
+                                    </representedOrganization>
+                                </assignedEntity>
+                            </performer>
+                        </procedure>
+                    </entry>
+                    <entry>
+                        <procedure moodCode="EVN" classCode="PROC">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.17" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.29" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19" assigningAuthorityName="IHE PCC" />
+                            <id root="D24AA703-DE97-41CF-8A01-F13276EF1FF5" />
+                            <code code="89.01" displayName="Brief outpatient consultation" codeSystem="2.16.840.1.113883.6.104" codeSystemName="ICD9">
+                                <originalText>
+                                    <reference value="#Proc2" />
+                                </originalText>
+                                <qualifier />
+                            </code>
+                            <text>
+                                <reference value="#Proc2" />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime>
+                                <low value="20110202" />
+                                <high value="20110202" />
+                            </effectiveTime>
+                            <performer>
+                                <assignedEntity>
+                                    <id extension="4433036027" root="2.16.840.1.113883.4.6" />
+                                    <addr use="WP">
+                                        <streetAddressLine>300 Main Street</streetAddressLine>
+                                        <city>Lewiston</city>
+                                        <state>ME</state>
+                                        <postalCode>04240</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-712-835-0143" use="WP" />
+                                    <assignedPerson>
+                                        <name>
+                                            <given>Colette</given>
+                                            <family>Alvarado</family>
+                                            <suffix>MD</suffix>
+                                        </name>
+                                    </assignedPerson>
+                                    <representedOrganization>
+                                        <id root="2.16.840.1.113883.4.450.579" />
+                                        <name>Middlesex Exact Data Medical Group</name>
+                                        <telecom value="tel:+1-712-835-0143" use="WP" />
+                                        <addr use="WP">
+                                            <streetAddressLine>300 Main Street</streetAddressLine>
+                                            <city>Lewiston</city>
+                                            <state>ME</state>
+                                            <postalCode>04240</postalCode>
+                                        </addr>
+                                    </representedOrganization>
+                                </assignedEntity>
+                            </performer>
+                        </procedure>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Family History Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.3.88.11.83.18" assigningAuthorityName="HITSP C83" />
+                    <templateId root="2.16.840.1.113883.10.20.1.4" assigningAuthorityName="CCD" />
+                    <code code="10157-6" displayName="History of family member diseases" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                    <title>Family History</title>
+                    <text>
+                        <paragraph>Father</paragraph>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Diagnosis</th>
+                                    <th>Age At Onset</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <content ID="familyhistory-1">Type 2 Diabetes</content>
+                                    </td>
+                                    <td>11</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <paragraph>Sister</paragraph>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Diagnosis</th>
+                                    <th>Age At Onset</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <content ID="familyhistory-2">Shortness of Breath</content>
+                                    </td>
+                                    <td>37</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <paragraph>Aunt</paragraph>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Diagnosis</th>
+                                    <th>Age At Onset</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <content ID="familyhistory-3">Anemia</content>
+                                    </td>
+                                    <td>46</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <paragraph>Grandfather</paragraph>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Diagnosis</th>
+                                    <th>Age At Onset</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <content ID="familyhistory-4">Epilepsy</content>
+                                    </td>
+                                    <td>95</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <organizer moodCode="EVN" classCode="CLUSTER">
+                            <templateId root="2.16.840.1.113883.10.20.1.23" assigningAuthorityName="CCD" />
+                            <statusCode code="completed" />
+                            <subject>
+                                <relatedSubject classCode="PRS">
+                                    <code code="FTH" displayName="Father" codeSystemName="HL7 FamilyMember" codeSystem="2.16.840.1.113883.5.111" />
+                                </relatedSubject>
+                            </subject>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.22" assigningAuthorityName="CCD" />
+                                    <id root="91FC38F7-2CAB-4742-84B5-6873C03F8BC5" />
+                                    <code code="44054006" displayName="Diagnosis" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96" />
+                                    <text>
+                                        <reference value="#familyhistory-1" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <entryRelationship typeCode="SUBJ" inversionInd="true">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="2.16.840.1.113883.10.20.1.38" />
+                                            <code code="397659008" codeSystem="2.16.840.1.113883.6.96" displayName="Age" />
+                                            <statusCode code="completed" />
+                                            <value xsi:type="INT" value="11" />
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </component>
+                        </organizer>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <organizer moodCode="EVN" classCode="CLUSTER">
+                            <templateId root="2.16.840.1.113883.10.20.1.23" assigningAuthorityName="CCD" />
+                            <statusCode code="completed" />
+                            <subject>
+                                <relatedSubject classCode="PRS">
+                                    <code code="SIS" displayName="Sister" codeSystemName="HL7 FamilyMember" codeSystem="2.16.840.1.113883.5.111" />
+                                </relatedSubject>
+                            </subject>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.22" assigningAuthorityName="CCD" />
+                                    <id root="B4941F96-A5D1-46A6-896D-2F0D3FDD2219" />
+                                    <code code="207057006" displayName="Diagnosis" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96" />
+                                    <text>
+                                        <reference value="#familyhistory-2" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <entryRelationship typeCode="SUBJ" inversionInd="true">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="2.16.840.1.113883.10.20.1.38" />
+                                            <code code="397659008" codeSystem="2.16.840.1.113883.6.96" displayName="Age" />
+                                            <statusCode code="completed" />
+                                            <value xsi:type="INT" value="37" />
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </component>
+                        </organizer>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <organizer moodCode="EVN" classCode="CLUSTER">
+                            <templateId root="2.16.840.1.113883.10.20.1.23" assigningAuthorityName="CCD" />
+                            <statusCode code="completed" />
+                            <subject>
+                                <relatedSubject classCode="PRS">
+                                    <code code="AUNT" displayName="Aunt" codeSystemName="HL7 FamilyMember" codeSystem="2.16.840.1.113883.5.111" />
+                                </relatedSubject>
+                            </subject>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.22" assigningAuthorityName="CCD" />
+                                    <id root="959C986B-7FD1-4E03-848B-32B681D667FF" />
+                                    <code code="271737000" displayName="Diagnosis" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96" />
+                                    <text>
+                                        <reference value="#familyhistory-3" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <entryRelationship typeCode="SUBJ" inversionInd="true">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="2.16.840.1.113883.10.20.1.38" />
+                                            <code code="397659008" codeSystem="2.16.840.1.113883.6.96" displayName="Age" />
+                                            <statusCode code="completed" />
+                                            <value xsi:type="INT" value="46" />
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </component>
+                        </organizer>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <organizer moodCode="EVN" classCode="CLUSTER">
+                            <templateId root="2.16.840.1.113883.10.20.1.23" assigningAuthorityName="CCD" />
+                            <statusCode code="completed" />
+                            <subject>
+                                <relatedSubject classCode="PRS">
+                                    <code code="GRFTH" displayName="Grandfather" codeSystemName="HL7 FamilyMember" codeSystem="2.16.840.1.113883.5.111" />
+                                </relatedSubject>
+                            </subject>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.22" assigningAuthorityName="CCD" />
+                                    <id root="9C191DC1-0F05-4068-8B6F-F63C040833B1" />
+                                    <code code="84757009" displayName="Diagnosis" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96" />
+                                    <text>
+                                        <reference value="#familyhistory-4" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <entryRelationship typeCode="SUBJ" inversionInd="true">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="2.16.840.1.113883.10.20.1.38" />
+                                            <code code="397659008" codeSystem="2.16.840.1.113883.6.96" displayName="Age" />
+                                            <statusCode code="completed" />
+                                            <value xsi:type="INT" value="95" />
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </component>
+                        </organizer>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Encounters Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.3.88.11.83.127" assigningAuthorityName="HITSP C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.5.3.3" assigningAuthorityName="HL7 CCD" />
+                    <templateId root="2.16.840.1.113883.10.20.1.3" assigningAuthorityName="HL7 CCD" />
+                    <!--Encounters section template-->
+                    <code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters" />
+                    <title>Encounters</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Encounter</th>
+                                    <th>Performer</th>
+                                    <th>Location</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <content ID="encounter1">Visit specialist on 2/2/2011</content>
+                                    </td>
+                                    <td>Colette Alvarado MD</td>
+                                    <td>Middlesex Exact Data Medical Group</td>
+                                    <td>2/2/2011</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <encounter classCode="ENC" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.16" assigningAuthorityName="HITSP/C83" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.14" assigningAuthorityName="IHE PCC" />
+                            <templateId root="2.16.840.1.113883.10.20.1.21" assigningAuthorityName="HITSP/C83" />
+                            <!--Encounter activity template-->
+                            <id root="B519A6FD-0277-49AA-8327-C85BB0E3FE0C" />
+                            <code code="AMB" displayName="Middlesex Exact Data Medical Group" codeSystemName="ActEncounterCode" codeSystem="2.16.840.1.113883.5.4">
+                                <originalText>Visit specialist on 2/2/2011<reference value="#encounter1" /></originalText>
+                            </code>
+                            <text>Visit specialist on 2/2/2011<reference value="#encounter1" /></text>
+                            <effectiveTime>
+                                <low value="20110202" />
+                                <high value="20110202" />
+                            </effectiveTime>
+                            <performer typeCode="PRF">
+                                <time>
+                                    <high value="20110202" />
+                                </time>
+                                <assignedEntity>
+                                    <id extension="4433036027" root="2.16.840.1.113883.4.6" />
+                                    <addr use="WP">
+                                        <streetAddressLine>300 Main Street</streetAddressLine>
+                                        <city>Lewiston</city>
+                                        <state>ME</state>
+                                        <postalCode>04240</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-712-835-0143" use="WP" />
+                                    <assignedPerson>
+                                        <name>
+                                            <given>Colette</given>
+                                            <family>Alvarado</family>
+                                            <suffix>MD</suffix>
+                                        </name>
+                                    </assignedPerson>
+                                    <representedOrganization>
+                                        <id root="2.16.840.1.113883.4.450.579" />
+                                        <name>Middlesex Exact Data Medical Group</name>
+                                        <telecom value="tel:+1-712-835-0143" use="WP" />
+                                        <addr use="WP">
+                                            <streetAddressLine>300 Main Street</streetAddressLine>
+                                            <city>Lewiston</city>
+                                            <state>ME</state>
+                                            <postalCode>04240</postalCode>
+                                        </addr>
+                                    </representedOrganization>
+                                </assignedEntity>
+                            </performer>
+                            <participant typeCode="LOC">
+                                <participantRole classCode="SDLOC">
+                                    <addr use="WP">
+                                        <streetAddressLine>300 Main Street</streetAddressLine>
+                                        <city>Lewiston</city>
+                                        <state>ME</state>
+                                        <postalCode>04240</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-712-835-0143" use="WP" />
+                                    <playingEntity>
+                                        <name>Middlesex Exact Data Medical Group</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                        </encounter>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Plan of Care-->
+                <section>
+                    <templateId root="2.16.840.1.113883.3.88.11.83.124" assigningAuthorityName="HITSP/C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.31" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.10.20.2.7" assigningAuthorityName="HL7 CCD" />
+                    <templateId root="2.16.840.1.113883.10.20.1.10" assigningAuthorityName="HL7 CCD" />
+                    <!--Plan of Care section template-->
+                    <code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Treatment plan" />
+                    <title>Plan of Care</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Planned Activity</th>
+                                    <th>Planned Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <content ID="plannedprocedure-1">lumpectomy - breast</content>
+                                    </td>
+                                    <td>2/2/2011</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="plannedprocedure-2">Sentinel lymph node biopsy - breast</content>
+                                    </td>
+                                    <td>2/2/2011</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="planneddrug-1">trastuzumab - 4 mg/kg; IV</content>
+                                    </td>
+                                    <td>2/2/2011</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <procedure classCode="OBS" moodCode="RQO">
+                            <templateId root="2.16.840.1.113883.10.20.1.25" assigningAuthorityName="CCD" />
+                            <!--Plan of Activity activity template-->
+                            <id root="1EEE8C1B-BA27-4120-8979-BD1A3D3EF240" />
+                            <code code="40.23" displayName="lumpectomy" codeSystem="2.16.840.1.113883.6.103">
+                                <originalText>lumpectomy - breast<reference value="#plannedprocedure-1" /></originalText>
+                            </code>
+                            <statusCode code="new" />
+                            <effectiveTime>
+                                <center value="20110202" />
+                            </effectiveTime>
+                        </procedure>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <procedure classCode="OBS" moodCode="RQO">
+                            <templateId root="2.16.840.1.113883.10.20.1.25" assigningAuthorityName="CCD" />
+                            <!--Plan of Activity activity template-->
+                            <id root="032395F5-5550-46A7-86EE-31E46B7D8959" />
+                            <code code="99.99" displayName="Sentinel lymph node biopsy" codeSystem="2.16.840.1.113883.6.103">
+                                <originalText>Sentinel lymph node biopsy - breast<reference value="#plannedprocedure-2" /></originalText>
+                            </code>
+                            <statusCode code="new" />
+                            <effectiveTime>
+                                <center value="20110202" />
+                            </effectiveTime>
+                        </procedure>
+                    </entry>
+                    <entry>
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="BD7F47D3-03E1-47F5-8795-596EA603FB14" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20110202" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="4" unit="mg/kg" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="806575" displayName="trastuzumab 4 mg/kg; IV" codeSystemName="RxNORM" codeSystem="2.16.840.1.113883.6.88">
+                                            <originalText>trastuzumab 4 mg/kg; IV<reference value="#med_" /></originalText>
+                                            <translation code="50242005656" displayName="trastuzumab 4 mg/kg; IV" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69" />
+                                        </code>
+                                        <name>trastuzumab</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="15240007" codeSystem="2.16.840.1.113883.6.96" displayName="Current and verified" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Alerts Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.3.88.11.83.102" assigningAuthorityName="HITSP/C8" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.13" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.10.20.1.2" assigningAuthorityName="CCD" />
+                    <!--Alerts Section-->
+                    <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                    <title>Allergies, Adverse Reactions, Alerts</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Substance</th>
+                                    <th>Reaction</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <content ID="alert-1">Drug Allergy</content>
+                                    </td>
+                                    <td>Influenza Vaccine</td>
+                                    <td>Swelling of the face</td>
+                                    <td>Active</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <act classCode="ACT" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.6" assigningAuthorityName="HITSP C83" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.3" assigningAuthorityName="IHE PCC" />
+                            <templateId root="2.16.840.1.113883.10.20.1.27" assigningAuthorityName="CCD" />
+                            <!--Allergy act template-->
+                            <id root="37912CF2-A542-4A6B-8471-736B5FAED717" />
+                            <code nullFlavor="NA" />
+                            <statusCode code="active" />
+                            <effectiveTime>
+                                <low nullFlavor="UNK" />
+                            </effectiveTime>
+                            <entryRelationship typeCode="SUBJ" inversionInd="false">
+                                <observation moodCode="EVN" classCode="OBS">
+                                    <templateId root="2.16.840.1.113883.10.20.1.28" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.6" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.18" assigningAuthorityName="CCD" />
+                                    <!--Allergy observation template-->
+                                    <id root="0084FAF9-5205-4A22-8BC5-6B159FFAF0AC" />
+                                    <code code="59037007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="drug intolerance">
+                                        <translation code="404684003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Clinical finding" />
+                                    </code>
+                                    <text>
+                                        <reference value="#alert-1" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime>
+                                        <low nullFlavor="UNK" />
+                                    </effectiveTime>
+                                    <value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="416098002" displayName="drug allergy" />
+                                    <participant typeCode="CSM">
+                                        <participantRole classCode="MANU">
+                                            <playingEntity classCode="MMAT">
+                                                <code codeSystem="2.16.840.1.113883.6.69" codeSystemName="NDC" displayName="Influenza Vaccine" code="33332010810">
+                                                    <originalText>Influenza Vaccine<reference value="#alert-1" /></originalText>
+                                                </code>
+                                                <name>Influenza Vaccine</name>
+                                            </playingEntity>
+                                        </participantRole>
+                                    </participant>
+                                    <entryRelationship typeCode="MFST" inversionInd="true">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="2.16.840.1.113883.10.20.1.54" />
+                                            <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+                                            <text>
+                                                <reference value="#reaction-" />
+                                            </text>
+                                            <statusCode code="completed" />
+                                            <value xsi:type="CD" code="248184009" codeSystem="2.16.840.1.113883.6.96" displayName="Swelling of the face" codeSystemName="SNOMED CT" />
+                                            <entryRelationship typeCode="SUBJ" inversionInd="true">
+                                                <observation classCode="OBS" moodCode="EVN">
+                                                    <templateId root="2.16.840.1.113883.10.20.1.55" />
+                                                    <code code="SEV" displayName="Severity" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" />
+                                                    <text>
+                                                        <reference value="#severity-1" />
+                                                    </text>
+                                                    <statusCode code="completed" />
+                                                    <value xsi:type="CD" code="6736007" codeSystem="2.16.840.1.113883.6.96" displayName="Moderate" codeSystemName="SNOMED CT" />
+                                                </observation>
+                                            </entryRelationship>
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </entryRelationship>
+                        </act>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Advance Directive Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.10.20.1.1" assigningAuthorityName="HL7 CCD" />
+                    <templateId root="2.16.840.1.113883.3.88.11.83.116" assigningAuthorityName="HITSP/C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.35" assigningAuthorityName="IHE PCC" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.34" assigningAuthorityName="IHE PCC" />
+                    <code code="42348-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                    <title>Advance Directives</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Directive</th>
+                                    <th>Description</th>
+                                    <th>Custodian</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Intubation</td>
+                                    <td>
+                                        <content ID="AdvDir_1">Do not Intubation</content>
+                                    </td>
+                                    <td>Salt Lake City Community Health</td>
+                                    <td>Verified With Family Only</td>
+                                </tr>
+                                <tr>
+                                    <td>Resuscitation</td>
+                                    <td>
+                                        <content ID="AdvDir_2">Do not Resuscitation</content>
+                                    </td>
+                                    <td>Salt Lake City Community Health</td>
+                                    <td>Supported By Durable Power of Attorney for Healthcare</td>
+                                </tr>
+                                <tr>
+                                    <td>Life Support</td>
+                                    <td>
+                                        <content ID="AdvDir_3">Do Life Support</content>
+                                    </td>
+                                    <td>Salt Lake City Community Health</td>
+                                    <td>Verified By Medical Record Only</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.12" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.17" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.7" assigningAuthorityName="IHE PCC" />
+                            <id root="3D7B73E8-B688-4CB7-8563-47E392BC026F" />
+                            <!--Advance directive observation template-->
+                            <code code="52765003" displayName="Intubation" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                <originalText>
+                                    <reference value="#AdvDir_1" />
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#AdvDir_1" />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime nullFlavor="UNK">
+                                <low nullFlavor="UNK" />
+                                <high nullFlavor="NA" />
+                            </effectiveTime>
+                            <value xsi:type="BL" value="false" />
+                            <participant typeCode="CST">
+                                <participantRole classCode="AGNT">
+                                    <addr use="WP">
+                                        <streetAddressLine>420 Franklin Street</streetAddressLine>
+                                        <city>Rumford</city>
+                                        <state>ME</state>
+                                        <postalCode>04276</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-607-642-7527" use="WP" />
+                                    <playingEntity>
+                                        <name>Salt Lake City Community Health</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.37" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="425396000" codeSystem="2.16.840.1.113883.6.96" displayName="Verified With Family Only" />
+                                </observation>
+                            </entryRelationship>
+                        </observation>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.12" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.17" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.7" assigningAuthorityName="IHE PCC" />
+                            <id root="C30AEFBB-6517-40C7-8780-44B5E774F57A" />
+                            <!--Advance directive observation template-->
+                            <code code="304251008" displayName="Resuscitation" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                <originalText>
+                                    <reference value="#AdvDir_2" />
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#AdvDir_2" />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime nullFlavor="UNK">
+                                <low nullFlavor="UNK" />
+                                <high nullFlavor="NA" />
+                            </effectiveTime>
+                            <value xsi:type="BL" value="false" />
+                            <participant typeCode="CST">
+                                <participantRole classCode="AGNT">
+                                    <addr use="WP">
+                                        <streetAddressLine>420 Franklin Street</streetAddressLine>
+                                        <city>Rumford</city>
+                                        <state>ME</state>
+                                        <postalCode>04276</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-607-642-7527" use="WP" />
+                                    <playingEntity>
+                                        <name>Salt Lake City Community Health</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.37" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="425393008" codeSystem="2.16.840.1.113883.6.96" displayName="Supported By Durable Power of Attorney for Healthcare" />
+                                </observation>
+                            </entryRelationship>
+                        </observation>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.12" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.17" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.7" assigningAuthorityName="IHE PCC" />
+                            <id root="A36FB995-1551-4E19-8129-0421C03384FC" />
+                            <!--Advance directive observation template-->
+                            <code code="78823007" displayName="Life Support" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                <originalText>
+                                    <reference value="#AdvDir_3" />
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#AdvDir_3" />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime nullFlavor="UNK">
+                                <low nullFlavor="UNK" />
+                                <high nullFlavor="NA" />
+                            </effectiveTime>
+                            <value xsi:type="BL" value="true" />
+                            <participant typeCode="CST">
+                                <participantRole classCode="AGNT">
+                                    <addr use="WP">
+                                        <streetAddressLine>420 Franklin Street</streetAddressLine>
+                                        <city>Rumford</city>
+                                        <state>ME</state>
+                                        <postalCode>04276</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-607-642-7527" use="WP" />
+                                    <playingEntity>
+                                        <name>Salt Lake City Community Health</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.37" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="310305009" codeSystem="2.16.840.1.113883.6.96" displayName="Verified By Medical Record Only" />
+                                </observation>
+                            </entryRelationship>
+                        </observation>
+                    </entry>
+                </section>
+            </component>
+        </structuredBody>
+    </component>
+</ClinicalDocument>
