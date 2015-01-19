@@ -30,52 +30,38 @@ import org.json.JSONException;
 import org.json.XML;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Parse {
 
 
   	public static void main(String[] args) throws Exception {
- 
-		// TODO Auto-generated method stub
-  		///try {
-			///DBConnect.connect();
-		///} catch (Exception e) {
-			///e.printStackTrace();
-		///}
-  		
+  		//DBOps.connect("True");
 		File path = new File("src/resources"); //path to your folder. eg. C:\\P4logs
 		for(File f: path.listFiles()) { // this loops through all the files + directories
 		    if(f.isFile() && !f.isHidden()) { // checks if it is a file, not a directory  
-		    	//System.out.println("src/resources/"+f.getName());
-		    	
-		    	//JSONObject xmlJSONObj = null;
-				//try {
-					//xmlJSONObj = XML.toJSONObject(new String(Files.readAllBytes(Paths.get("src/resources/"+f.getName()))));
-				//} catch (JSONException | IOException e) {
-					// TODO Auto-generated catch block
-					//e.printStackTrace();
-				//}
-                //String jsonPrettyPrintString = null;
-				//try {
-					//jsonPrettyPrintString = xmlJSONObj.toString(4);
-				//} catch (JSONException e) {
-					// TODO Auto-generated catch block
-					//e.printStackTrace();
-				//}
-                //System.out.println(jsonPrettyPrintString);
-                
-		    	
 		    	try {
 		            JSONObject xmlJSONObj = XML.toJSONObject(new String(Files.readAllBytes(Paths.get("src/resources/"+f.getName()))));
 		            
-		            //System.out.println(xmlJSONObj.getJSONObject("ClinicalDocument").getJSONObject("recordTarget").getJSONObject("patientRole").getJSONObject("patient").getJSONObject("name"));
-		            //SyntheticEHR.getResults(xmlJSONObj);
+		            DBOps.populateDatabase("OMOP", "person", xmlJSONObj);
+		            DBOps.populateDatabase("OMOP", "condition_occurrence", xmlJSONObj);
+		            DBOps.populateDatabase("OMOP", "drug_exposure", xmlJSONObj);
+		            DBOps.populateDatabase("OMOP", "observation", xmlJSONObj);
 		            
-		            //System.out.println("Patient file: " + f.getName());
-		            //System.out.println("Time of Birth: " + SyntheticEHR.getPatientBirthTime(xmlJSONObj));
-		            //System.out.println("Gender: " + SyntheticEHR.getPatientGender(xmlJSONObj));
-		            System.out.println("Weight: " + SyntheticEHR.getWeight(xmlJSONObj));
+		            //System.out.println("Name: " + SyntheticEHR.getPatientName(xmlJSONObj).getClass());
+		            //System.out.println("Date: " + SyntheticEHR.getObsDate(xmlJSONObj)); 
+		            
+		            /*String [] cond = SyntheticEHR.getObs(xmlJSONObj);
+		            for (int i = 0 ; i< cond.length; i++){
+		            	if (cond[i] != null){
+		            		System.out.println("Cond: " + cond[i]);
+		            		//String[] data = cond[i].split("\\|");
+		            		//System.out.println(data[1]);
+		            	}	
+		            }*/
+		            /*
 		            System.out.println("Height: " + SyntheticEHR.getHeight(xmlJSONObj));
 		            System.out.println("Systolic BP: " + SyntheticEHR.getSysBP(xmlJSONObj));
 		            System.out.println("Diastolic BP: " + SyntheticEHR.getDiaBP(xmlJSONObj));
@@ -87,14 +73,22 @@ public class Parse {
 		            if (temp != null){
 		            	System.out.println(temp);
 		            } 
-		            System.out.println("\n");		            
-		            /*
+		            
+		            //String input = "some input string";
+		            int hashCode = Math.abs(f.getName().hashCode());
+		            System.out.println("input primary key = " + hashCode);
+		            System.out.println("\n");
+		            
+		            
 		            try {
-		            	Connection conn = DBConnect.connect();
+		            	Connection connection = DBConnect.connect();
 		        		//DBConnect.insertIntoTable(con);
-		        		String sql;
+		            	String tableName = "person";
+		            	populateTable(connection, tableName);
+		        		/*
+		            	String sql;
 		                sql = "DROP TABLE location";
-		                try (Statement s = conn.createStatement()) {
+		                try (Statement s = connection.createStatement()) {
 		                    s.executeUpdate(sql);
 		                } catch (Exception e) {
 		                    // assume table did not previously exist
@@ -103,16 +97,16 @@ public class Parse {
 		    		    //stmt = conn.createStatement();
 		    		    //int loc = 1;
 		    	        sql = "CREATE TABLE location (location_id int(11) primary key generated always as identity, address_1 varchar(50), address_2  varchar(50), city varchar(50), state varchar(2), zip varchar(9))";
-		    	        try (Statement s = conn.createStatement()) {
+		    	        try (Statement s = connection.createStatement()) {
 		    	            s.executeUpdate(sql);
 		    	        }
 		    		    sql = "insert into location " +
 		    		    		"values (1, 'GT', 'Tech', null, 'GA', '30363', 'Fulton', 'Atlanta')";
-		    		    try (Statement s = conn.createStatement()) {
+		    		    try (Statement s = connection.createStatement()) {
 		    	            s.executeUpdate(sql);
 		    	        }
 		    		    //stmt.executeUpdate(query);
-
+					
 		    		} catch (Exception e) {
 		    			e.printStackTrace();
 		    		}*/
@@ -122,80 +116,40 @@ public class Parse {
 		        } catch (JSONException | IOException je) {
 		            System.out.println(je.toString());
 		        }
-		    	
-		    	
-		    	//*
-		    	//System.out.println(f);
-		    	//String ccd = null;
-				//try {
-					//ccd = new Scanner(f).useDelimiter("\\Z").next();
-				//} catch (FileNotFoundException e) {
-					// TODO Auto-generated catch block
-					//e.printStackTrace();
-				//}
-		    	//System.out.println(ccd);
-		    	//ConsolPackage.eINSTANCE.eClass();
-				//ContinuityOfCareDocument ccdDocument = null;
-				//try {
-					//InputStream is = new ByteArrayInputStream(ccd.getBytes());
-					//ccdDocument = (ContinuityOfCareDocument) CDAUtil.load(is);
-					//System.out.println(ccdDocument);
-					//} catch (FileNotFoundException e) {
-					// TODO Auto-generated catch block
-					//e.printStackTrace();
-					//} catch (Exception e) {
-					// TODO Auto-generated catch block
-					//e.printStackTrace();
-					//}
-		    	//System.out.println("Hello Eclipse!");    
-		    	//readFile(f);
-                //*
-		    	//try {
-					//ClinicalDocument ccdDoc = CDAUtil.load(new FileInputStream(f));
-					//System.out.println(ccdDoc.getSections());
-				//} catch (Exception e) {
-					// TODO Auto-generated catch block
-					//e.printStackTrace();
-				//}
-		    
-		    	//CDAUtil.loadPackages();
-		    	//ConsolPackage.eINSTANCE.eClass();
-		    	//try {
-		    		//String ccd = (String) new FileInputStream("src/resources/000008119_5.XML");
-		    		//InputStream is = new ByteArrayInputStream(ccd.getBytes());
-		    		//ContinuityOfCareDocument ccdDoc = (ContinuityOfCareDocument)  CDAUtil.load(new FileInputStream("src/resources/000008119_5.XML"));
-		    		//System.out.println(ccdDoc);
-					//if (ccdDoc instanceof ContinuityOfCareDocument) {
-						//	System.out.println((ContinuityOfCareDocument)ccdDoc);
-					//}
-					//else{
-						//System.out.println(ccdDoc);
-					//}
-					//AlertsSection alertsSection = ccdDoc.getAlertsSection();
-				//} catch (FileNotFoundException e) {
-					// TODO Auto-generated catch block
-					//e.printStackTrace();
-				//} catch (Exception e) {
-					// TODO Auto-generated catch block
-					//e.printStackTrace();
-				//}
-		    	 
-		    	
 		    }
 		}
-		//String filename= "src/files/input.XML";
-		//readFile(filename);
-		
-  		/*
-  		try {
-			DBConnect.connect();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		*/
+		    	
 	}
 	
-	
+	public static void populateTable(Connection connection, String tableName){
+		if (tableName.equals("person")){//USER
+			Statement statement = null;
+			ResultSet rs = null;
+			String sql = "insert into location " +
+		    		"values (1, 'GT', 'Tech', null, 'GA', '30363', 'Fulton', 'Atlanta')";
+			try {
+				statement = connection.createStatement();
+				statement.executeUpdate("INSERT INTO trn_employee (EMP_NAME, EMP_SALARY) VALUES('Manish',19000)");
+
+				rs = statement.getGeneratedKeys();
+
+				if (rs.next()) {
+					System.out.println("Auto Generated Primary Key " + rs.getInt(1)); 
+				}
+			} catch (SQLException e) {
+				System.out.println("SQLException Occured..");
+			}
+		}
+		else if (tableName.equals("condition_occurrence")){//CONDITION
+			
+		}
+		else if (tableName.equals("drug_exposure")){//MEDICATION
+			
+		}
+		else if (tableName.equals("observation")){//OBSERVATION
+			
+		}
+	}
 	public static void readFile(File file){
 		//File file = new File (filename);
 		List<String> list = new ArrayList<>();
@@ -218,7 +172,6 @@ public class Parse {
 		//List<String> lines = IOUtils.readLines(inputStream);
 		//return lines;
 	}
+
 }
 
-//Implicit initialization
-//CDAUtil.loadPackages();

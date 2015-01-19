@@ -1,0 +1,2348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="CCD.xsl"?>
+<!--Copyright EXACTDATA, LLC. ALL RIGHTS RESERVED.-->
+<!--This file contains synthetic data depicting a fictional health summary. Any resemblance to a real person is coincidental.-->
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://xreg2.nist.gov:8080/hitspValidation/schema/cdar2c32/infrastructure/cda/C32_CDA.xsd" xmlns="urn:hl7-org:v3">
+    <realmCode code="US" />
+    <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+    <templateId root="2.16.840.1.113883.10.20.3" />
+    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1" />
+    <templateId root="2.16.840.1.113883.3.88.11.32.1" assigningAuthorityName="HITSP/C32" />
+    <id root="67CE212F-DF30-459E-8BF1-F21106CF04E6" />
+    <code code="34133-9" codeSystem="2.16.840.1.113883.6.1" displayName="Summarization of episode note" />
+    <title>Continuity of Care Document</title>
+    <effectiveTime value="20111024183900" />
+    <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" />
+    <languageCode code="en-US" />
+    <recordTarget>
+        <patientRole>
+            <!--Patient ID 000266513-01-->
+            <id extension="000-26-6513" root="2.16.840.1.113883.4.1" />
+            <addr use="HP">
+                <streetAddressLine>498 George Court</streetAddressLine>
+                <city>Atlanta</city>
+                <state>GA</state>
+                <postalCode>31131</postalCode>
+            </addr>
+            <telecom value="tel:+1-903-803-6962" use="HP" />
+            <patient>
+                <name>
+                    <given>Ralph</given>
+                    <given>K</given>
+                    <family>Zimmerman</family>
+                </name>
+                <administrativeGenderCode code="M" displayName="Male" codeSystemName="HL7 AdministrativeGenderCodes" codeSystem="2.16.840.1.113883.5.1" />
+                <birthTime value="19470705" />
+                <maritalStatusCode code="L" displayName="Legally Separated" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatusCode" />
+                <raceCode displayName="White" code="2106-3" codeSystem="2.16.840.1.113883.6.238" codeSystemName="CDC Race and Ethnicity" />
+                <languageCommunication>
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.1" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.3.88.11.83.2" assigningAuthorityName="HITSP C83" />
+                    <languageCode code="en-US" />
+                    <preferenceInd value="true" />
+                </languageCommunication>
+            </patient>
+        </patientRole>
+    </recordTarget>
+    <author>
+        <time value="20111024183900" />
+        <assignedAuthor>
+            <id extension="1684152075" root="2.16.840.1.113883.4.6" />
+            <addr use="WP">
+                <streetAddressLine>102320 David Blackburn Road</streetAddressLine>
+                <city>Atlanta</city>
+                <state>GA</state>
+                <postalCode>30326</postalCode>
+            </addr>
+            <telecom value="tel:+1-609-670-7077" use="WP" />
+            <assignedPerson>
+                <realmCode code="US" />
+                <name>
+                    <given>Zahir</given>
+                    <family>Mcintosh</family>
+                    <suffix></suffix>
+                </name>
+            </assignedPerson>
+            <representedOrganization>
+                <id root="2.16.840.1.113883.4.450" />
+                <name>ExactData Medical Health System</name>
+                <telecom use="WP" nullFlavor="UNK" />
+                <addr use="WP" nullFlavor="UNK" />
+            </representedOrganization>
+        </assignedAuthor>
+    </author>
+    <custodian>
+        <assignedCustodian>
+            <representedCustodianOrganization>
+                <id root="2.16.840.1.113883.4.450" />
+                <name>ExactData Medical Health System</name>
+                <telecom use="WP" nullFlavor="UNK" />
+                <addr use="WP" nullFlavor="UNK" />
+            </representedCustodianOrganization>
+        </assignedCustodian>
+    </custodian>
+    <participant typeCode="IND">
+        <templateId root="2.16.840.1.113883.3.88.11.83.3" />
+        <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.4" />
+        <time value="20111024183900" />
+        <associatedEntity classCode="ECON">
+            <code code="FRND" displayName="unrelated friend" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" />
+            <addr />
+            <telecom value="tel:+1-308-440-5147" use="HP" />
+            <associatedPerson>
+                <name>
+                    <given>Camden</given>
+                    <family>Sherman</family>
+                </name>
+            </associatedPerson>
+        </associatedEntity>
+    </participant>
+    <documentationOf>
+        <serviceEvent classCode="PCPR">
+            <effectiveTime>
+                <low value="20111024183900" />
+                <high value="20111024183900" />
+            </effectiveTime>
+            <performer typeCode="PRF">
+                <templateId root="2.16.840.1.113883.3.88.11.83.4" />
+                <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.3" />
+                <functionCode code="CP" displayName="Consulting Provider" codeSystem="2.16.840.1.113883.12.443" codeSystemName="Provider Role">
+                    <originalText>Consulting Provider</originalText>
+                </functionCode>
+                <time>
+                    <low value="20111024183900" />
+                    <high value="20111024183900" />
+                </time>
+                <assignedEntity>
+                    <id extension="1684152075" root="2.16.840.1.113883.4.6" />
+                    <code displayName="Laboratories" code="290000000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC Provider Codes" />
+                    <addr use="WP">
+                        <streetAddressLine>102320 David Blackburn Road</streetAddressLine>
+                        <city>Atlanta</city>
+                        <state>GA</state>
+                        <postalCode>30326</postalCode>
+                    </addr>
+                    <telecom value="tel:+1-609-670-7077" use="WP" />
+                    <assignedPerson>
+                        <realmCode code="US" />
+                        <name>
+                            <given>Zahir</given>
+                            <family>Mcintosh</family>
+                            <suffix></suffix>
+                        </name>
+                    </assignedPerson>
+                    <representedOrganization>
+                        <id root="2.16.840.1.113883.4.450" />
+                        <name>ExactData Medical Health System</name>
+                        <telecom use="WP" nullFlavor="UNK" />
+                        <addr use="WP" nullFlavor="UNK" />
+                    </representedOrganization>
+                </assignedEntity>
+            </performer>
+        </serviceEvent>
+    </documentationOf>
+    <componentOf>
+        <encompassingEncounter>
+            <id root="BCB03313-38BE-40E6-885D-BD257E3EAD83" />
+            <effectiveTime>
+                <low value="20111024183900" />
+                <high value="20111024183900" />
+            </effectiveTime>
+            <responsibleParty>
+                <assignedEntity>
+                    <id extension="734064671" root="2.16.840.1.113883.4.450" />
+                    <addr use="WP">
+                        <streetAddressLine>102320 David Blackburn Road</streetAddressLine>
+                        <city>Atlanta</city>
+                        <state>GA</state>
+                        <postalCode>30326</postalCode>
+                    </addr>
+                    <telecom value="tel:+1-609-670-7077" use="WP" />
+                    <assignedPerson>
+                        <realmCode code="US" />
+                        <name>
+                            <given>Zahir</given>
+                            <family>Mcintosh</family>
+                            <suffix></suffix>
+                        </name>
+                    </assignedPerson>
+                    <representedOrganization>
+                        <id root="2.16.840.1.113883.4.450" />
+                        <name>ExactData Medical Health System</name>
+                        <telecom use="WP" nullFlavor="UNK" />
+                        <addr use="WP" nullFlavor="UNK" />
+                    </representedOrganization>
+                </assignedEntity>
+            </responsibleParty>
+            <location>
+                <healthCareFacility>
+                    <id nullFlavor="UNK" />
+                    <code code="laboratory" displayName="Laboratory" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" />
+                    <location>
+                        <name>Darwin Diagnostic Services</name>
+                        <addr use="WP">
+                            <streetAddressLine>102320 David Blackburn Road</streetAddressLine>
+                            <city>Atlanta</city>
+                            <state>GA</state>
+                            <postalCode>30326</postalCode>
+                        </addr>
+                    </location>
+                    <serviceProviderOrganization>
+                        <id root="2.16.840.1.113883.4.450" />
+                        <name>ExactData Medical Health System</name>
+                        <telecom use="WP" nullFlavor="UNK" />
+                        <addr use="WP" nullFlavor="UNK" />
+                        <standardIndustryClassCode code="621111" displayName="Offices of Physicians" codeSystem="2.16.840.1.113883.1.11.19298" codeSystemName="NAICS" />
+                    </serviceProviderOrganization>
+                </healthCareFacility>
+            </location>
+        </encompassingEncounter>
+    </componentOf>
+    <component>
+        <structuredBody>
+            <component>
+                <!--Problems Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.3.88.11.83.103" assigningAuthorityName="HITSP/C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.6" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.10.20.1.11" assigningAuthorityName="HL7 CCD" />
+                    <!--Problem section template-->
+                    <code code="11450-4" displayName="Problems" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                    <title>Problems</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Problem</th>
+                                    <th>Status</th>
+                                    <th>Onset Date</th>
+                                    <th>Resolution Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td ID="problem-1">Type 1 Diabetes</td>
+                                    <td ID="problem-status-1">Active</td>
+                                    <td>4/15/1971</td>
+                                    <td>Ongoing</td>
+                                </tr>
+                                <tr>
+                                    <td ID="problem-2">Hemorrhagic Stroke</td>
+                                    <td ID="problem-status-2">Active</td>
+                                    <td>8/3/1993</td>
+                                    <td>Ongoing</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <act classCode="ACT" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.10.20.1.27" assigningAuthorityName="CCD" />
+                            <templateId root="2.16.840.1.113883.3.88.11.83.7" assigningAuthorityName="HITSP C83" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" assigningAuthorityName="IHE PCC" />
+                            <!--Problem act template-->
+                            <id root="CACD5353-D336-4B00-87D1-F125ECB1D712" />
+                            <code nullFlavor="NA" />
+                            <statusCode code="active" />
+                            <effectiveTime>
+                                <low value="19710415000000" />
+                            </effectiveTime>
+                            <performer typeCode="PRF">
+                                <time>
+                                    <low value="20111024183900" />
+                                    <high value="20111024183900" />
+                                </time>
+                                <assignedEntity>
+                                    <id extension="1684152075" root="2.16.840.1.113883.4.6" />
+                                    <addr use="WP">
+                                        <streetAddressLine>102320 David Blackburn Road</streetAddressLine>
+                                        <city>Atlanta</city>
+                                        <state>GA</state>
+                                        <postalCode>30326</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-609-670-7077" use="WP" />
+                                    <assignedPerson>
+                                        <realmCode code="US" />
+                                        <name>
+                                            <given>Zahir</given>
+                                            <family>Mcintosh</family>
+                                            <suffix></suffix>
+                                        </name>
+                                    </assignedPerson>
+                                    <representedOrganization>
+                                        <id root="2.16.840.1.113883.4.450" />
+                                        <name>ExactData Medical Health System</name>
+                                        <telecom use="WP" nullFlavor="UNK" />
+                                        <addr use="WP" nullFlavor="UNK" />
+                                    </representedOrganization>
+                                </assignedEntity>
+                            </performer>
+                            <entryRelationship typeCode="SUBJ" inversionInd="false">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.28" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" assigningAuthorityName="IHE PCC" />
+                                    <!--Problem observation template-->
+                                    <id root="CACD5353-D336-4B00-87D1-F125ECB1D712" />
+                                    <code code="64572001" displayName="Disease" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <text>
+                                        <reference value="#problem-1" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime>
+                                        <low value="20111024183900" />
+                                    </effectiveTime>
+                                    <value xsi:type="CD" code="46635009" displayName="TYPE 1 DIABETES" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                        <translation code="250.01" displayName="Type 1 Diabetes" codeSystemName="ICD9" codeSystem="2.16.840.1.113883.6.103" />
+                                    </value>
+                                    <entryRelationship typeCode="REFR" inversionInd="false">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="2.16.840.1.113883.10.20.1.50" assigningAuthorityName="CCD" />
+                                            <templateId root="2.16.840.1.113883.10.20.1.57" assigningAuthorityName="CCD" />
+                                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1.1" assigningAuthorityName="IHE PCC" />
+                                            <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                                            <text>
+                                                <reference value="#problem-status-1" />
+                                            </text>
+                                            <statusCode code="completed" />
+                                            <value xsi:type="CE" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </entryRelationship>
+                        </act>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <act classCode="ACT" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.10.20.1.27" assigningAuthorityName="CCD" />
+                            <templateId root="2.16.840.1.113883.3.88.11.83.7" assigningAuthorityName="HITSP C83" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" assigningAuthorityName="IHE PCC" />
+                            <!--Problem act template-->
+                            <id root="3BB18D15-D374-4664-8B68-5AC0197FEC4D" />
+                            <code nullFlavor="NA" />
+                            <statusCode code="active" />
+                            <effectiveTime>
+                                <low value="19930803000000" />
+                            </effectiveTime>
+                            <performer typeCode="PRF">
+                                <time>
+                                    <low value="20111024183900" />
+                                    <high value="20111024183900" />
+                                </time>
+                                <assignedEntity>
+                                    <id extension="1684152075" root="2.16.840.1.113883.4.6" />
+                                    <addr use="WP">
+                                        <streetAddressLine>102320 David Blackburn Road</streetAddressLine>
+                                        <city>Atlanta</city>
+                                        <state>GA</state>
+                                        <postalCode>30326</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-609-670-7077" use="WP" />
+                                    <assignedPerson>
+                                        <realmCode code="US" />
+                                        <name>
+                                            <given>Zahir</given>
+                                            <family>Mcintosh</family>
+                                            <suffix></suffix>
+                                        </name>
+                                    </assignedPerson>
+                                    <representedOrganization>
+                                        <id root="2.16.840.1.113883.4.450" />
+                                        <name>ExactData Medical Health System</name>
+                                        <telecom use="WP" nullFlavor="UNK" />
+                                        <addr use="WP" nullFlavor="UNK" />
+                                    </representedOrganization>
+                                </assignedEntity>
+                            </performer>
+                            <entryRelationship typeCode="SUBJ" inversionInd="false">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.28" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" assigningAuthorityName="IHE PCC" />
+                                    <!--Problem observation template-->
+                                    <id root="3BB18D15-D374-4664-8B68-5AC0197FEC4D" />
+                                    <code code="64572001" displayName="Disease" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <text>
+                                        <reference value="#problem-2" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime>
+                                        <low value="20111024183900" />
+                                    </effectiveTime>
+                                    <value xsi:type="CD" code="195213000" displayName="HEMORRHAGIC STROKE" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                        <translation code="431" displayName="Hemorrhagic Stroke" codeSystemName="ICD9" codeSystem="2.16.840.1.113883.6.103" />
+                                    </value>
+                                    <entryRelationship typeCode="REFR" inversionInd="false">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="2.16.840.1.113883.10.20.1.50" assigningAuthorityName="CCD" />
+                                            <templateId root="2.16.840.1.113883.10.20.1.57" assigningAuthorityName="CCD" />
+                                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1.1" assigningAuthorityName="IHE PCC" />
+                                            <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                                            <text>
+                                                <reference value="#problem-status-2" />
+                                            </text>
+                                            <statusCode code="completed" />
+                                            <value xsi:type="CE" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </entryRelationship>
+                        </act>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Results Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.3.88.11.83.122" assigningAuthorityName="HITSP/C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.28" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.10.20.1.14" assigningAuthorityName="CCD" />
+                    <code code="30954-2" displayName="Relevant diagnostic tests and/or laboratory data" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                    <title>Results</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Test</th>
+                                    <th>Result</th>
+                                    <th>Preformer</th>
+                                    <th>Date Collected</th>
+                                    <th>Date Resulted</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <content ID="result-1">CT Head</content>
+                                    </td>
+                                    <td>
+                                        <content ID="result-1_1_1">shows cortical hemorrhage in left frontal lobe</content>
+                                    </td>
+                                    <td>Darwin Diagnostic Services</td>
+                                    <td>2011-10-24T18:39:00Z</td>
+                                    <td>2011-10-24T23:57:13Z</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="result-2">ECG</content>
+                                    </td>
+                                    <td>
+                                        <content ID="result-2_2_1">sinus rhythm with LVH</content>
+                                    </td>
+                                    <td>Darwin Diagnostic Services</td>
+                                    <td>2011-10-24T18:39:00Z</td>
+                                    <td>2011-10-24T19:18:38Z</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="COMP">
+                        <organizer classCode="CLUSTER" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.10.20.1.32" assigningAuthorityName="CCD" />
+                            <id root="2.16.840.1.113883.4.450" extension="111024 CH 83118118" />
+                            <code code="24725-4" displayName="CT Head" codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+                            <statusCode code="completed" />
+                            <component>
+                                <procedure classCode="PROC" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.17" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.29" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19" assigningAuthorityName="IHE PCC" />
+                                    <!--Result procedure observation template-->
+                                    <id root="10AC2E70-9E58-496B-8769-7278FC295B9B" />
+                                    <code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="24725-4" displayName="CT Head">
+                                        <originalText>
+                                            <reference value="#result-1" />
+                                        </originalText>
+                                    </code>
+                                    <text>
+                                        <reference value="#result-1" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20111024183900" />
+                                    <performer typeCode="PRF">
+                                        <time>
+                                            <high value="20111024183900" />
+                                        </time>
+                                        <assignedEntity>
+                                            <id extension="734064671" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>102320 David Blackburn Road</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30326</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-609-670-7077" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Zahir</given>
+                                                    <family>Mcintosh</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Darwin Diagnostic Services</name>
+                                                <telecom use="WP" value="tel:+1-609-670-7077" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>102320 David Blackburn Road</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30326</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </procedure>
+                            </component>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.15.1" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                                    <!--Result observation template-->
+                                    <id root="68294995-CA03-485C-8E97-AEC7D59E1C39" />
+                                    <code code="24725-4" displayName="CT Head" codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+                                    <text>
+                                        <reference value="#result-1_1_1" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20111024235713" />
+                                    <value xsi:type="ST">shows cortical hemorrhage in left frontal lobe</value>
+                                </observation>
+                            </component>
+                        </organizer>
+                    </entry>
+                    <entry typeCode="COMP">
+                        <organizer classCode="CLUSTER" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.10.20.1.32" assigningAuthorityName="CCD" />
+                            <id root="2.16.840.1.113883.4.450" extension="111024 CH 95895608" />
+                            <code code="34534-8" displayName="ECG" codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+                            <statusCode code="completed" />
+                            <component>
+                                <procedure classCode="PROC" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.17" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.29" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19" assigningAuthorityName="IHE PCC" />
+                                    <!--Result procedure observation template-->
+                                    <id root="E09B3359-1A62-4A56-88FB-C65C402C0B2B" />
+                                    <code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="34534-8" displayName="ECG">
+                                        <originalText>
+                                            <reference value="#result-2" />
+                                        </originalText>
+                                    </code>
+                                    <text>
+                                        <reference value="#result-2" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20111024183900" />
+                                    <performer typeCode="PRF">
+                                        <time>
+                                            <high value="20111024183900" />
+                                        </time>
+                                        <assignedEntity>
+                                            <id extension="734064671" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>102320 David Blackburn Road</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30326</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-609-670-7077" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Zahir</given>
+                                                    <family>Mcintosh</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Darwin Diagnostic Services</name>
+                                                <telecom use="WP" value="tel:+1-609-670-7077" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>102320 David Blackburn Road</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30326</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </procedure>
+                            </component>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.15.1" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                                    <!--Result observation template-->
+                                    <id root="8F7B631A-2944-4BB0-8DAD-1D172A110226" />
+                                    <code code="8601-7" displayName="Interpretation" codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+                                    <text>
+                                        <reference value="#result-2_2_1" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20111024191838" />
+                                    <value xsi:type="ST">sinus rhythm with LVH</value>
+                                </observation>
+                            </component>
+                        </organizer>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Medications Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.3.88.11.83.112" assigningAuthorityName="HITSP/C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.19" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.10.20.1.8" assigningAuthorityName="HL7 CCD" />
+                    <code code="10160-0" displayName="History of medication use" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                    <title>Medications</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Medication</th>
+                                    <th>Dosage</th>
+                                    <th>Days Supplied</th>
+                                    <th>Last Filled Date</th>
+                                    <th>Refills Remaining</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <content ID="med-1">protamine sulfate</content>
+                                    </td>
+                                    <td>1 mg</td>
+                                    <td>1</td>
+                                    <td>2005-09-23T07:23:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="med-2">Insulin Reg</content>
+                                    </td>
+                                    <td>SLIDING SCALE 1</td>
+                                    <td>1</td>
+                                    <td>2005-12-06T00:16:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="med-3">protamine sulfate</content>
+                                    </td>
+                                    <td>1 mg</td>
+                                    <td>1</td>
+                                    <td>2006-04-04T06:33:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="med-4">LANTUS</content>
+                                    </td>
+                                    <td>100 [IU]/mL</td>
+                                    <td>30</td>
+                                    <td>2006-11-22T14:34:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="med-5">Insulin Reg</content>
+                                    </td>
+                                    <td>SLIDING SCALE 1</td>
+                                    <td>1</td>
+                                    <td>2007-03-18T09:13:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="med-6">Insulin Nph</content>
+                                    </td>
+                                    <td>1 U/kg</td>
+                                    <td>90</td>
+                                    <td>2008-05-27T05:06:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="med-7">protamine sulfate</content>
+                                    </td>
+                                    <td>1 mg</td>
+                                    <td>1</td>
+                                    <td>2008-09-27T21:26:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="med-8">Insulin Nph</content>
+                                    </td>
+                                    <td>1 U/kg</td>
+                                    <td>90</td>
+                                    <td>2009-11-21T14:11:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="med-9">LANTUS</content>
+                                    </td>
+                                    <td>100 [IU]/mL</td>
+                                    <td>30</td>
+                                    <td>2010-07-31T18:50:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="med-10">mannitol</content>
+                                    </td>
+                                    <td>1 mg/kg</td>
+                                    <td>1</td>
+                                    <td>2010-10-10T18:49:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="med-11">protamine sulfate</content>
+                                    </td>
+                                    <td>1 mg</td>
+                                    <td>1</td>
+                                    <td>2011-10-22T23:33:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="D1825F27-7BBD-4770-81D0-57AA496C03A3" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20050923072300" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="1" unit="mg" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="63323-229-30" displayName="protamine sulfate" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-1" />
+                                            </originalText>
+                                        </code>
+                                        <name>protamine sulfate</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="050919-10837" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20050919164500" />
+                                        <assignedAuthor>
+                                            <id extension="751944093" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                <city>Alpharetta</city>
+                                                <state>GA</state>
+                                                <postalCode>30009</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-860-618-5347" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Kennedy</given>
+                                                    <family>Huffman</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Heartland Community Health Clinic</name>
+                                                <telecom use="WP" value="tel:+1-860-618-5347" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                    <city>Alpharetta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30009</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX56470698" assigningAuthorityName="Apothecary Shop" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20050923072300" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="381663534" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30398</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-904-650-9750" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Bree</given>
+                                                    <family>Garner</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Apothecary Shop</name>
+                                                <telecom use="WP" value="tel:+1-904-650-9750" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30398</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="CFB2955C-1FC0-47CE-8C04-13B931E4D851" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20051206001600" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="1" unit="1" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="0002-8215-01" displayName="Insulin Reg" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-2" />
+                                            </originalText>
+                                        </code>
+                                        <name>Insulin Reg</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="051201-09872" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20051201150000" />
+                                        <assignedAuthor>
+                                            <id extension="751944093" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                <city>Alpharetta</city>
+                                                <state>GA</state>
+                                                <postalCode>30009</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-860-618-5347" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Kennedy</given>
+                                                    <family>Huffman</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Heartland Community Health Clinic</name>
+                                                <telecom use="WP" value="tel:+1-860-618-5347" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                    <city>Alpharetta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30009</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX80235130" assigningAuthorityName="Apothecary Shop" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20051206001600" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="381663534" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30398</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-904-650-9750" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Bree</given>
+                                                    <family>Garner</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Apothecary Shop</name>
+                                                <telecom use="WP" value="tel:+1-904-650-9750" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30398</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="339A825F-90DD-4575-8491-09775F197248" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20060404063300" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="1" unit="mg" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="63323-229-30" displayName="protamine sulfate" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-3" />
+                                            </originalText>
+                                        </code>
+                                        <name>protamine sulfate</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="060330-38947" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20060330181500" />
+                                        <assignedAuthor>
+                                            <id extension="751944093" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                <city>Alpharetta</city>
+                                                <state>GA</state>
+                                                <postalCode>30009</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-860-618-5347" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Kennedy</given>
+                                                    <family>Huffman</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Heartland Community Health Clinic</name>
+                                                <telecom use="WP" value="tel:+1-860-618-5347" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                    <city>Alpharetta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30009</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX19911199" assigningAuthorityName="Apothecary Shop" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20060404063300" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="381663534" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30398</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-904-650-9750" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Bree</given>
+                                                    <family>Garner</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Apothecary Shop</name>
+                                                <telecom use="WP" value="tel:+1-904-650-9750" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30398</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="B1A57E8C-F51B-4E51-8A7D-31A4665873A7" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20061122143400" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="100" unit="[IU]/mL" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="0088-2220-52" displayName="LANTUS" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-4" />
+                                            </originalText>
+                                        </code>
+                                        <name>LANTUS</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="061120-82117" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="3" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20061120211500" />
+                                        <assignedAuthor>
+                                            <id extension="751944093" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                <city>Alpharetta</city>
+                                                <state>GA</state>
+                                                <postalCode>30009</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-860-618-5347" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Kennedy</given>
+                                                    <family>Huffman</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Heartland Community Health Clinic</name>
+                                                <telecom use="WP" value="tel:+1-860-618-5347" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                    <city>Alpharetta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30009</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX28750147" assigningAuthorityName="Apothecary Shop" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20061122143400" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="3" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="381663534" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30398</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-904-650-9750" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Bree</given>
+                                                    <family>Garner</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Apothecary Shop</name>
+                                                <telecom use="WP" value="tel:+1-904-650-9750" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30398</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="4797D27A-242B-4133-8ED9-6505DB7C4985" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20070318091300" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="1" unit="1" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="0002-8215-01" displayName="Insulin Reg" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-5" />
+                                            </originalText>
+                                        </code>
+                                        <name>Insulin Reg</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="070312-53141" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20070312200000" />
+                                        <assignedAuthor>
+                                            <id extension="751944093" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                <city>Alpharetta</city>
+                                                <state>GA</state>
+                                                <postalCode>30009</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-860-618-5347" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Kennedy</given>
+                                                    <family>Huffman</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Heartland Community Health Clinic</name>
+                                                <telecom use="WP" value="tel:+1-860-618-5347" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                    <city>Alpharetta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30009</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX83907155" assigningAuthorityName="Apothecary Shop" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20070318091300" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="381663534" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30398</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-904-650-9750" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Bree</given>
+                                                    <family>Garner</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Apothecary Shop</name>
+                                                <telecom use="WP" value="tel:+1-904-650-9750" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30398</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="E69452CD-C521-4752-8AC1-078B9C0C45A0" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20080527050600" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="1" unit="U/kg" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="0002-8315-01" displayName="Insulin Nph" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-6" />
+                                            </originalText>
+                                        </code>
+                                        <name>Insulin Nph</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="080522-61157" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="90" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20080522180000" />
+                                        <assignedAuthor>
+                                            <id extension="751944093" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                <city>Alpharetta</city>
+                                                <state>GA</state>
+                                                <postalCode>30009</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-860-618-5347" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Kennedy</given>
+                                                    <family>Huffman</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Heartland Community Health Clinic</name>
+                                                <telecom use="WP" value="tel:+1-860-618-5347" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                    <city>Alpharetta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30009</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX32976736" assigningAuthorityName="Apothecary Shop" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20080527050600" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="90" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="381663534" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30398</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-904-650-9750" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Bree</given>
+                                                    <family>Garner</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Apothecary Shop</name>
+                                                <telecom use="WP" value="tel:+1-904-650-9750" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30398</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="6297EC41-DD52-4751-88FA-AB5EB6EC9DE2" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20080927212600" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="1" unit="mg" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="63323-229-30" displayName="protamine sulfate" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-7" />
+                                            </originalText>
+                                        </code>
+                                        <name>protamine sulfate</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="080923-02697" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20080923201500" />
+                                        <assignedAuthor>
+                                            <id extension="751944093" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                <city>Alpharetta</city>
+                                                <state>GA</state>
+                                                <postalCode>30009</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-860-618-5347" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Kennedy</given>
+                                                    <family>Huffman</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Heartland Community Health Clinic</name>
+                                                <telecom use="WP" value="tel:+1-860-618-5347" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                    <city>Alpharetta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30009</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX49549222" assigningAuthorityName="Apothecary Shop" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20080927212600" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="381663534" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30398</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-904-650-9750" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Bree</given>
+                                                    <family>Garner</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Apothecary Shop</name>
+                                                <telecom use="WP" value="tel:+1-904-650-9750" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30398</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="E14CCCFD-D492-430D-849C-9A59360B83C4" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20091121141100" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="1" unit="U/kg" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="0002-8315-01" displayName="Insulin Nph" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-8" />
+                                            </originalText>
+                                        </code>
+                                        <name>Insulin Nph</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="091118-41695" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="90" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20091118141500" />
+                                        <assignedAuthor>
+                                            <id extension="751944093" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                <city>Alpharetta</city>
+                                                <state>GA</state>
+                                                <postalCode>30009</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-860-618-5347" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Kennedy</given>
+                                                    <family>Huffman</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Heartland Community Health Clinic</name>
+                                                <telecom use="WP" value="tel:+1-860-618-5347" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                    <city>Alpharetta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30009</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX31591164" assigningAuthorityName="Apothecary Shop" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20091121141100" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="90" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="381663534" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30398</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-904-650-9750" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Bree</given>
+                                                    <family>Garner</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Apothecary Shop</name>
+                                                <telecom use="WP" value="tel:+1-904-650-9750" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30398</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="B7880B57-DB2D-4922-8134-D6988B171FA3" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20100731185000" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="100" unit="[IU]/mL" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="0088-2220-52" displayName="LANTUS" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-9" />
+                                            </originalText>
+                                        </code>
+                                        <name>LANTUS</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="100726-13476" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="3" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20100726204500" />
+                                        <assignedAuthor>
+                                            <id extension="751944093" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                <city>Alpharetta</city>
+                                                <state>GA</state>
+                                                <postalCode>30009</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-860-618-5347" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Kennedy</given>
+                                                    <family>Huffman</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Heartland Community Health Clinic</name>
+                                                <telecom use="WP" value="tel:+1-860-618-5347" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                    <city>Alpharetta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30009</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX29351716" assigningAuthorityName="Apothecary Shop" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20100731185000" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="3" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="381663534" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30398</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-904-650-9750" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Bree</given>
+                                                    <family>Garner</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Apothecary Shop</name>
+                                                <telecom use="WP" value="tel:+1-904-650-9750" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30398</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="8072132F-90D2-42DB-8F3B-8509C1D45123" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20101010184900" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="1" unit="mg/kg" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="0517-4050-25" displayName="mannitol" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-10" />
+                                            </originalText>
+                                        </code>
+                                        <name>mannitol</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="101008-11412" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="225" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20101008210000" />
+                                        <assignedAuthor>
+                                            <id extension="498801843" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>349088 Bench Court</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30324</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-682-788-3098" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Iris</given>
+                                                    <family>Bird</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Cardiology Associates</name>
+                                                <telecom use="WP" value="tel:+1-682-788-3098" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>349088 Bench Court</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30324</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX56603349" assigningAuthorityName="Apothecary Shop" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20101010184900" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="225" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="381663534" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30398</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-904-650-9750" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Bree</given>
+                                                    <family>Garner</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Apothecary Shop</name>
+                                                <telecom use="WP" value="tel:+1-904-650-9750" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30398</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="F743F3D7-340A-4A51-8D36-E25A26DE4E43" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20111022233300" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="1" unit="mg" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="63323-229-30" displayName="protamine sulfate" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-11" />
+                                            </originalText>
+                                        </code>
+                                        <name>protamine sulfate</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="111020-93451" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20111020171500" />
+                                        <assignedAuthor>
+                                            <id extension="751944093" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                <city>Alpharetta</city>
+                                                <state>GA</state>
+                                                <postalCode>30009</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-860-618-5347" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Kennedy</given>
+                                                    <family>Huffman</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Heartland Community Health Clinic</name>
+                                                <telecom use="WP" value="tel:+1-860-618-5347" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                                    <city>Alpharetta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30009</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX99205949" assigningAuthorityName="Apothecary Shop" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20111022233300" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="381663534" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30398</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-904-650-9750" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Bree</given>
+                                                    <family>Garner</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Apothecary Shop</name>
+                                                <telecom use="WP" value="tel:+1-904-650-9750" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>3130 Glenn Hill Circle</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30398</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Encounters Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.3.88.11.83.127" assigningAuthorityName="HITSP C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.5.3.3" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.10.20.1.3" assigningAuthorityName="HL7 CCD" />
+                    <!--Encounters section template-->
+                    <code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters" />
+                    <title>Encounters</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Encounter</th>
+                                    <th>Performer</th>
+                                    <th>Location</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2011-10-24T18:39:00Z</td>
+                                    <td>
+                                        <content ID="encounter-1">Walk-In</content>
+                                    </td>
+                                    <td>Zahir Mcintosh </td>
+                                    <td>Darwin Diagnostic Services</td>
+                                    <td>
+                                        <content ID="encounter-note-1"></content>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <encounter classCode="ENC" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.16" assigningAuthorityName="HITSP/C83" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.14" assigningAuthorityName="IHE PCC" />
+                            <templateId root="2.16.840.1.113883.10.20.1.21" assigningAuthorityName="HITSP/C83" />
+                            <!--Encounter activity template-->
+                            <id root="2.16.840.1.113883.4.450" extension="A0471337639734136902" />
+                            <code code="Ambulatory" displayName="Ambulatory" codeSystemName="ActEncounterCode" codeSystem="2.16.840.1.113883.5.4">
+                                <originalText>
+                                    <reference value="#encounter-1" />
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#encounter-note-1" />
+                            </text>
+                            <effectiveTime>
+                                <low value="20111024173900" />
+                                <high value="20111024183900" />
+                            </effectiveTime>
+                            <performer typeCode="PRF">
+                                <time>
+                                    <high value="20111024183900" />
+                                </time>
+                                <assignedEntity>
+                                    <id extension="734064671" root="2.16.840.1.113883.4.450" />
+                                    <addr use="WP">
+                                        <streetAddressLine>102320 David Blackburn Road</streetAddressLine>
+                                        <city>Atlanta</city>
+                                        <state>GA</state>
+                                        <postalCode>30326</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-609-670-7077" use="WP" />
+                                    <assignedPerson>
+                                        <realmCode code="US" />
+                                        <name>
+                                            <given>Zahir</given>
+                                            <family>Mcintosh</family>
+                                            <suffix></suffix>
+                                        </name>
+                                    </assignedPerson>
+                                    <representedOrganization>
+                                        <id nullFlavor="UNK" />
+                                        <name>Darwin Diagnostic Services</name>
+                                        <telecom use="WP" value="tel:+1-609-670-7077" />
+                                        <addr use="WP">
+                                            <streetAddressLine>102320 David Blackburn Road</streetAddressLine>
+                                            <city>Atlanta</city>
+                                            <state>GA</state>
+                                            <postalCode>30326</postalCode>
+                                        </addr>
+                                    </representedOrganization>
+                                </assignedEntity>
+                            </performer>
+                            <participant typeCode="LOC">
+                                <participantRole classCode="SDLOC">
+                                    <addr use="WP">
+                                        <streetAddressLine>102320 David Blackburn Road</streetAddressLine>
+                                        <city>Atlanta</city>
+                                        <state>GA</state>
+                                        <postalCode>30326</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-609-670-7077" use="WP" />
+                                    <playingEntity>
+                                        <name>Darwin Diagnostic Services</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                        </encounter>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Advance Directive Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.10.20.1.1" assigningAuthorityName="HL7 CCD" />
+                    <templateId root="2.16.840.1.113883.3.88.11.83.116" assigningAuthorityName="HITSP/C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.35" assigningAuthorityName="IHE PCC" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.34" assigningAuthorityName="IHE PCC" />
+                    <code code="42348-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                    <title>Advance Directives</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Directive</th>
+                                    <th>Description</th>
+                                    <th>Custodian</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CPR</td>
+                                    <td>
+                                        <content ID="AdvDir_1">Do not CPR</content>
+                                    </td>
+                                    <td>Heartland Community Health Clinic</td>
+                                    <td>Verified By Medical Record Only</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.12" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.17" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.7" assigningAuthorityName="IHE PCC" />
+                            <id root="367398EB-5F6E-4E32-843B-A171324F21C2" />
+                            <!--Advance directive observation template-->
+                            <code code="89666000" displayName="CPR" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                <originalText>
+                                    <reference value="#AdvDir_1" />
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#AdvDir_1" />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime nullFlavor="UNK">
+                                <low nullFlavor="UNK" />
+                                <high nullFlavor="NA" />
+                            </effectiveTime>
+                            <value xsi:type="BL" value="false" />
+                            <participant typeCode="CST">
+                                <participantRole classCode="AGNT">
+                                    <addr use="WP">
+                                        <streetAddressLine>2351 Pelican Drive</streetAddressLine>
+                                        <city>Alpharetta</city>
+                                        <state>GA</state>
+                                        <postalCode>30009</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-860-618-5347" use="WP" />
+                                    <playingEntity>
+                                        <name>Heartland Community Health Clinic</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.37" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="310305009" codeSystem="2.16.840.1.113883.6.96" displayName="Verified By Medical Record Only" />
+                                </observation>
+                            </entryRelationship>
+                        </observation>
+                    </entry>
+                </section>
+            </component>
+        </structuredBody>
+    </component>
+</ClinicalDocument>

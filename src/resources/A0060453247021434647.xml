@@ -1,0 +1,1734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="CCD.xsl"?>
+<!--Copyright EXACTDATA, LLC. ALL RIGHTS RESERVED.-->
+<!--This file contains synthetic data depicting a fictional health summary. Any resemblance to a real person is coincidental.-->
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://xreg2.nist.gov:8080/hitspValidation/schema/cdar2c32/infrastructure/cda/C32_CDA.xsd" xmlns="urn:hl7-org:v3">
+    <realmCode code="US" />
+    <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+    <templateId root="2.16.840.1.113883.10.20.3" />
+    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1" />
+    <templateId root="2.16.840.1.113883.3.88.11.32.1" assigningAuthorityName="HITSP/C32" />
+    <id root="B08E17C7-81A3-4B65-8CBA-2A67AF92797E" />
+    <code code="34133-9" codeSystem="2.16.840.1.113883.6.1" displayName="Summarization of episode note" />
+    <title>Continuity of Care Document</title>
+    <effectiveTime value="20100113190000" />
+    <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" />
+    <languageCode code="en-US" />
+    <recordTarget>
+        <patientRole>
+            <!--Patient ID 000199767-01-->
+            <id extension="000-19-9767" root="2.16.840.1.113883.4.1" />
+            <addr use="HP">
+                <streetAddressLine>7367 Platsek Drive</streetAddressLine>
+                <city>Atlanta</city>
+                <state>GA</state>
+                <postalCode>30314</postalCode>
+            </addr>
+            <telecom value="tel:+1-712-294-0289" use="HP" />
+            <patient>
+                <name>
+                    <given>Alma</given>
+                    <given>L</given>
+                    <family>Deleon</family>
+                </name>
+                <administrativeGenderCode code="F" displayName="Female" codeSystemName="HL7 AdministrativeGenderCodes" codeSystem="2.16.840.1.113883.5.1" />
+                <birthTime value="19741209" />
+                <maritalStatusCode code="L" displayName="Legally Separated" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatusCode" />
+                <raceCode displayName="White" code="2106-3" codeSystem="2.16.840.1.113883.6.238" codeSystemName="CDC Race and Ethnicity" />
+                <languageCommunication>
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.1" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.3.88.11.83.2" assigningAuthorityName="HITSP C83" />
+                    <languageCode code="en-US" />
+                    <preferenceInd value="true" />
+                </languageCommunication>
+            </patient>
+        </patientRole>
+    </recordTarget>
+    <author>
+        <time value="20100113190000" />
+        <assignedAuthor>
+            <id extension="1789029723" root="2.16.840.1.113883.4.6" />
+            <addr use="WP">
+                <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                <city>Fairburn</city>
+                <state>GA</state>
+                <postalCode>30213</postalCode>
+            </addr>
+            <telecom value="tel:+1-616-359-1654" use="WP" />
+            <assignedPerson>
+                <realmCode code="US" />
+                <name>
+                    <given>Nicholas</given>
+                    <family>Roach</family>
+                    <suffix>MD</suffix>
+                </name>
+            </assignedPerson>
+            <representedOrganization>
+                <id root="2.16.840.1.113883.4.450" />
+                <name>ExactData Medical Health System</name>
+                <telecom use="WP" nullFlavor="UNK" />
+                <addr use="WP" nullFlavor="UNK" />
+            </representedOrganization>
+        </assignedAuthor>
+    </author>
+    <custodian>
+        <assignedCustodian>
+            <representedCustodianOrganization>
+                <id root="2.16.840.1.113883.4.450" />
+                <name>ExactData Medical Health System</name>
+                <telecom use="WP" nullFlavor="UNK" />
+                <addr use="WP" nullFlavor="UNK" />
+            </representedCustodianOrganization>
+        </assignedCustodian>
+    </custodian>
+    <participant typeCode="IND">
+        <templateId root="2.16.840.1.113883.3.88.11.83.3" />
+        <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.4" />
+        <time value="20100113190000" />
+        <associatedEntity classCode="ECON">
+            <code code="FRND" displayName="unrelated friend" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" />
+            <addr />
+            <telecom value="tel:+1-914-754-2242" use="HP" />
+            <associatedPerson>
+                <name>
+                    <given>Barrett</given>
+                    <family>Hancock</family>
+                </name>
+            </associatedPerson>
+        </associatedEntity>
+    </participant>
+    <documentationOf>
+        <serviceEvent classCode="PCPR">
+            <effectiveTime>
+                <low value="20100113190000" />
+                <high value="20100113190000" />
+            </effectiveTime>
+            <performer typeCode="PRF">
+                <templateId root="2.16.840.1.113883.3.88.11.83.4" />
+                <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.3" />
+                <functionCode code="PP" displayName="Primary Care Provider" codeSystem="2.16.840.1.113883.12.443" codeSystemName="Provider Role">
+                    <originalText>Primary Care Provider</originalText>
+                </functionCode>
+                <time>
+                    <low value="20100113190000" />
+                    <high value="20100113190000" />
+                </time>
+                <assignedEntity>
+                    <id extension="1789029723" root="2.16.840.1.113883.4.6" />
+                    <code displayName="Allopathic &amp; Osteopathic Physicians" code="200000000X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC Provider Codes" />
+                    <addr use="WP">
+                        <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                        <city>Fairburn</city>
+                        <state>GA</state>
+                        <postalCode>30213</postalCode>
+                    </addr>
+                    <telecom value="tel:+1-616-359-1654" use="WP" />
+                    <assignedPerson>
+                        <realmCode code="US" />
+                        <name>
+                            <given>Nicholas</given>
+                            <family>Roach</family>
+                            <suffix>MD</suffix>
+                        </name>
+                    </assignedPerson>
+                    <representedOrganization>
+                        <id root="2.16.840.1.113883.4.450" />
+                        <name>ExactData Medical Health System</name>
+                        <telecom use="WP" nullFlavor="UNK" />
+                        <addr use="WP" nullFlavor="UNK" />
+                    </representedOrganization>
+                </assignedEntity>
+            </performer>
+        </serviceEvent>
+    </documentationOf>
+    <componentOf>
+        <encompassingEncounter>
+            <id root="A8720815-EB92-486D-84E7-248C9315EC33" />
+            <effectiveTime>
+                <low value="20100113190000" />
+                <high value="20100113190000" />
+            </effectiveTime>
+            <responsibleParty>
+                <assignedEntity>
+                    <id extension="369259082" root="2.16.840.1.113883.4.450" />
+                    <addr use="WP">
+                        <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                        <city>Fairburn</city>
+                        <state>GA</state>
+                        <postalCode>30213</postalCode>
+                    </addr>
+                    <telecom value="tel:+1-616-359-1654" use="WP" />
+                    <assignedPerson>
+                        <realmCode code="US" />
+                        <name>
+                            <given>Nicholas</given>
+                            <family>Roach</family>
+                            <suffix>MD</suffix>
+                        </name>
+                    </assignedPerson>
+                    <representedOrganization>
+                        <id root="2.16.840.1.113883.4.450" />
+                        <name>ExactData Medical Health System</name>
+                        <telecom use="WP" nullFlavor="UNK" />
+                        <addr use="WP" nullFlavor="UNK" />
+                    </representedOrganization>
+                </assignedEntity>
+            </responsibleParty>
+            <location>
+                <healthCareFacility>
+                    <id nullFlavor="UNK" />
+                    <code code="FMC" displayName="Family medicine clinic" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" />
+                    <location>
+                        <name>Riverside Medical Associates</name>
+                        <addr use="WP">
+                            <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                            <city>Fairburn</city>
+                            <state>GA</state>
+                            <postalCode>30213</postalCode>
+                        </addr>
+                    </location>
+                    <serviceProviderOrganization>
+                        <id root="2.16.840.1.113883.4.450" />
+                        <name>ExactData Medical Health System</name>
+                        <telecom use="WP" nullFlavor="UNK" />
+                        <addr use="WP" nullFlavor="UNK" />
+                        <standardIndustryClassCode code="621111" displayName="Offices of Physicians" codeSystem="2.16.840.1.113883.1.11.19298" codeSystemName="NAICS" />
+                    </serviceProviderOrganization>
+                </healthCareFacility>
+            </location>
+        </encompassingEncounter>
+    </componentOf>
+    <component>
+        <structuredBody>
+            <component>
+                <!--Problems Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.3.88.11.83.103" assigningAuthorityName="HITSP/C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.6" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.10.20.1.11" assigningAuthorityName="HL7 CCD" />
+                    <!--Problem section template-->
+                    <code code="11450-4" displayName="Problems" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                    <title>Problems</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Problem</th>
+                                    <th>Status</th>
+                                    <th>Onset Date</th>
+                                    <th>Resolution Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td ID="problem-1">Chronic Obstructive Pulmonary Disease</td>
+                                    <td ID="problem-status-1">Active</td>
+                                    <td>8/17/2000</td>
+                                    <td>Ongoing</td>
+                                </tr>
+                                <tr>
+                                    <td ID="problem-2">Hemorrhagic Stroke</td>
+                                    <td ID="problem-status-2">Active</td>
+                                    <td>9/24/1994</td>
+                                    <td>Ongoing</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <act classCode="ACT" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.10.20.1.27" assigningAuthorityName="CCD" />
+                            <templateId root="2.16.840.1.113883.3.88.11.83.7" assigningAuthorityName="HITSP C83" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" assigningAuthorityName="IHE PCC" />
+                            <!--Problem act template-->
+                            <id root="297CD76F-736D-4B1B-88AD-DB822836B4A2" />
+                            <code nullFlavor="NA" />
+                            <statusCode code="active" />
+                            <effectiveTime>
+                                <low value="20000817000000" />
+                            </effectiveTime>
+                            <performer typeCode="PRF">
+                                <time>
+                                    <low value="20100113190000" />
+                                    <high value="20100113190000" />
+                                </time>
+                                <assignedEntity>
+                                    <id extension="1789029723" root="2.16.840.1.113883.4.6" />
+                                    <addr use="WP">
+                                        <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                                        <city>Fairburn</city>
+                                        <state>GA</state>
+                                        <postalCode>30213</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-616-359-1654" use="WP" />
+                                    <assignedPerson>
+                                        <realmCode code="US" />
+                                        <name>
+                                            <given>Nicholas</given>
+                                            <family>Roach</family>
+                                            <suffix>MD</suffix>
+                                        </name>
+                                    </assignedPerson>
+                                    <representedOrganization>
+                                        <id root="2.16.840.1.113883.4.450" />
+                                        <name>ExactData Medical Health System</name>
+                                        <telecom use="WP" nullFlavor="UNK" />
+                                        <addr use="WP" nullFlavor="UNK" />
+                                    </representedOrganization>
+                                </assignedEntity>
+                            </performer>
+                            <entryRelationship typeCode="SUBJ" inversionInd="false">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.28" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" assigningAuthorityName="IHE PCC" />
+                                    <!--Problem observation template-->
+                                    <id root="297CD76F-736D-4B1B-88AD-DB822836B4A2" />
+                                    <code code="64572001" displayName="Disease" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <text>
+                                        <reference value="#problem-1" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime>
+                                        <low value="20100113190000" />
+                                    </effectiveTime>
+                                    <value xsi:type="CD" code="196001008" displayName="CHRONIC OBSTRUCTIVE PULMONARY DISEASE" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                        <translation code="496" displayName="Chronic Obstructive Pulmonary Disease" codeSystemName="ICD9" codeSystem="2.16.840.1.113883.6.103" />
+                                    </value>
+                                    <entryRelationship typeCode="REFR" inversionInd="false">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="2.16.840.1.113883.10.20.1.50" assigningAuthorityName="CCD" />
+                                            <templateId root="2.16.840.1.113883.10.20.1.57" assigningAuthorityName="CCD" />
+                                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1.1" assigningAuthorityName="IHE PCC" />
+                                            <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                                            <text>
+                                                <reference value="#problem-status-1" />
+                                            </text>
+                                            <statusCode code="completed" />
+                                            <value xsi:type="CE" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </entryRelationship>
+                        </act>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <act classCode="ACT" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.10.20.1.27" assigningAuthorityName="CCD" />
+                            <templateId root="2.16.840.1.113883.3.88.11.83.7" assigningAuthorityName="HITSP C83" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" assigningAuthorityName="IHE PCC" />
+                            <!--Problem act template-->
+                            <id root="A941F4F5-E0D0-4520-84EB-603F3DE8A95A" />
+                            <code nullFlavor="NA" />
+                            <statusCode code="active" />
+                            <effectiveTime>
+                                <low value="19940924000000" />
+                            </effectiveTime>
+                            <performer typeCode="PRF">
+                                <time>
+                                    <low value="20100113190000" />
+                                    <high value="20100113190000" />
+                                </time>
+                                <assignedEntity>
+                                    <id extension="1789029723" root="2.16.840.1.113883.4.6" />
+                                    <addr use="WP">
+                                        <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                                        <city>Fairburn</city>
+                                        <state>GA</state>
+                                        <postalCode>30213</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-616-359-1654" use="WP" />
+                                    <assignedPerson>
+                                        <realmCode code="US" />
+                                        <name>
+                                            <given>Nicholas</given>
+                                            <family>Roach</family>
+                                            <suffix>MD</suffix>
+                                        </name>
+                                    </assignedPerson>
+                                    <representedOrganization>
+                                        <id root="2.16.840.1.113883.4.450" />
+                                        <name>ExactData Medical Health System</name>
+                                        <telecom use="WP" nullFlavor="UNK" />
+                                        <addr use="WP" nullFlavor="UNK" />
+                                    </representedOrganization>
+                                </assignedEntity>
+                            </performer>
+                            <entryRelationship typeCode="SUBJ" inversionInd="false">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.28" assigningAuthorityName="CCD" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" assigningAuthorityName="IHE PCC" />
+                                    <!--Problem observation template-->
+                                    <id root="A941F4F5-E0D0-4520-84EB-603F3DE8A95A" />
+                                    <code code="64572001" displayName="Disease" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <text>
+                                        <reference value="#problem-2" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime>
+                                        <low value="20100113190000" />
+                                    </effectiveTime>
+                                    <value xsi:type="CD" code="195213000" displayName="HEMORRHAGIC STROKE" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                        <translation code="431" displayName="Hemorrhagic Stroke" codeSystemName="ICD9" codeSystem="2.16.840.1.113883.6.103" />
+                                    </value>
+                                    <entryRelationship typeCode="REFR" inversionInd="false">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="2.16.840.1.113883.10.20.1.50" assigningAuthorityName="CCD" />
+                                            <templateId root="2.16.840.1.113883.10.20.1.57" assigningAuthorityName="CCD" />
+                                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1.1" assigningAuthorityName="IHE PCC" />
+                                            <code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                                            <text>
+                                                <reference value="#problem-status-2" />
+                                            </text>
+                                            <statusCode code="completed" />
+                                            <value xsi:type="CE" code="55561003" displayName="Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </entryRelationship>
+                        </act>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Medications Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.3.88.11.83.112" assigningAuthorityName="HITSP/C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.19" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.10.20.1.8" assigningAuthorityName="HL7 CCD" />
+                    <code code="10160-0" displayName="History of medication use" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                    <title>Medications</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Medication</th>
+                                    <th>Dosage</th>
+                                    <th>Days Supplied</th>
+                                    <th>Last Filled Date</th>
+                                    <th>Refills Remaining</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <content ID="med-1">protamine sulfate</content>
+                                    </td>
+                                    <td>1 mg</td>
+                                    <td>1</td>
+                                    <td>2005-03-31T08:03:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="med-2">OMS 50</content>
+                                    </td>
+                                    <td>6 h</td>
+                                    <td>1</td>
+                                    <td>2005-08-15T01:00:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="med-3">protamine sulfate</content>
+                                    </td>
+                                    <td>1 mg</td>
+                                    <td>1</td>
+                                    <td>2007-10-13T02:24:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="med-4">OMS 50</content>
+                                    </td>
+                                    <td>6 h</td>
+                                    <td>1</td>
+                                    <td>2007-10-19T22:16:00Z</td>
+                                    <td>0</td>
+                                    <td>Completed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="5C1378B5-E512-400A-8ECB-B215604184AF" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20050331080300" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="1" unit="mg" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="63323-229-30" displayName="protamine sulfate" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-1" />
+                                            </originalText>
+                                        </code>
+                                        <name>protamine sulfate</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="050324-70038" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20050324170000" />
+                                        <assignedAuthor>
+                                            <id extension="369259082" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                                                <city>Fairburn</city>
+                                                <state>GA</state>
+                                                <postalCode>30213</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-616-359-1654" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Nicholas</given>
+                                                    <family>Roach</family>
+                                                    <suffix>Dr.</suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Riverside Medical Associates</name>
+                                                <telecom use="WP" value="tel:+1-616-359-1654" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                                                    <city>Fairburn</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30213</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX18140856" assigningAuthorityName="CVS" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20050331080300" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="426881524" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>7133 Success Drive</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30361</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-607-389-3214" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Eliana</given>
+                                                    <family>Norton</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>CVS</name>
+                                                <telecom use="WP" value="tel:+1-607-389-3214" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>7133 Success Drive</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30361</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="5215F294-3A19-403D-8E0E-0CB95670C0A2" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20050815010000" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="6" unit="h" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="65689-001-21" displayName="OMS 50" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-2" />
+                                            </originalText>
+                                        </code>
+                                        <name>OMS 50</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="050815-73869" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="4320" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20050815010000" />
+                                        <assignedAuthor>
+                                            <id extension="965848463" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>5058 Ingram Street</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>31193</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-518-306-0325" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Forrest</given>
+                                                    <family>Wynn</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Extended Medical Services</name>
+                                                <telecom use="WP" value="tel:+1-518-306-0325" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>5058 Ingram Street</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>31193</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX41725134" assigningAuthorityName="Extended Medical Services" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20050815010000" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="4320" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="965848463" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>5058 Ingram Street</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>31193</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-518-306-0325" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Forrest</given>
+                                                    <family>Wynn</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Extended Medical Services</name>
+                                                <telecom use="WP" value="tel:+1-518-306-0325" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>5058 Ingram Street</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>31193</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="3AEBFBC2-07F6-47DB-8768-79C06AA68792" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20071013022400" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="1" unit="mg" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="63323-229-30" displayName="protamine sulfate" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-3" />
+                                            </originalText>
+                                        </code>
+                                        <name>protamine sulfate</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="071009-95251" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20071009150000" />
+                                        <assignedAuthor>
+                                            <id extension="878941121" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>2519 Carlos Court</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30303</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-727-488-1798" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Jason</given>
+                                                    <family>Cantu</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Heartbeat Cardiovascular  Center</name>
+                                                <telecom use="WP" value="tel:+1-727-488-1798" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>2519 Carlos Court</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30303</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX12409196" assigningAuthorityName="CVS" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20071013022400" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="1" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="426881524" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>7133 Success Drive</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>30361</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-607-389-3214" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Eliana</given>
+                                                    <family>Norton</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>CVS</name>
+                                                <telecom use="WP" value="tel:+1-607-389-3214" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>7133 Success Drive</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>30361</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <id root="B8A26CD1-5575-4BA9-8146-FF25BD438797" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20071019221600" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="6" unit="h" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="65689-001-21" displayName="OMS 50" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-4" />
+                                            </originalText>
+                                        </code>
+                                        <name>OMS 50</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.57" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.47" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" codeSystemName="LOINC" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="73425007" displayName="No Longer Active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                </observation>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="INT">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.3" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.3" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" />
+                                    <id root="2.16.840.1.113883.4.450" extension="071019-87607" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="4320" unit="{UNASSIGNED}" />
+                                    <author>
+                                        <time value="20071019221600" />
+                                        <assignedAuthor>
+                                            <id extension="965848463" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>5058 Ingram Street</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>31193</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-518-306-0325" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Forrest</given>
+                                                    <family>Wynn</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Extended Medical Services</name>
+                                                <telecom use="WP" value="tel:+1-518-306-0325" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>5058 Ingram Street</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>31193</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                </supply>
+                            </entryRelationship>
+                            <entryRelationship typeCode="REFR">
+                                <supply classCode="SPLY" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.34" assigningAuthorityName="CCD" />
+                                    <id root="2.16.840.1.113883.4.450" extension="RX61993729" assigningAuthorityName="Extended Medical Services" />
+                                    <code nullFlavor="NA" />
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20071019221600" />
+                                    <repeatNumber value="1" />
+                                    <quantity value="4320" />
+                                    <performer>
+                                        <assignedEntity>
+                                            <id extension="965848463" root="2.16.840.1.113883.4.450" />
+                                            <addr use="WP">
+                                                <streetAddressLine>5058 Ingram Street</streetAddressLine>
+                                                <city>Atlanta</city>
+                                                <state>GA</state>
+                                                <postalCode>31193</postalCode>
+                                            </addr>
+                                            <telecom value="tel:+1-518-306-0325" use="WP" />
+                                            <assignedPerson>
+                                                <realmCode code="US" />
+                                                <name>
+                                                    <given>Forrest</given>
+                                                    <family>Wynn</family>
+                                                    <suffix></suffix>
+                                                </name>
+                                            </assignedPerson>
+                                            <representedOrganization>
+                                                <id nullFlavor="UNK" />
+                                                <name>Extended Medical Services</name>
+                                                <telecom use="WP" value="tel:+1-518-306-0325" />
+                                                <addr use="WP">
+                                                    <streetAddressLine>5058 Ingram Street</streetAddressLine>
+                                                    <city>Atlanta</city>
+                                                    <state>GA</state>
+                                                    <postalCode>31193</postalCode>
+                                                </addr>
+                                            </representedOrganization>
+                                        </assignedEntity>
+                                    </performer>
+                                </supply>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Vital signs Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.10.20.1.16" assigningAuthorityName="HL7 CCD" />
+                    <templateId root="2.16.840.1.113883.3.88.11.83.119" assigningAuthorityName="HITSP/C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2" assigningAuthorityName="IHE PCC" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.25" assigningAuthorityName="IHE PCC" />
+                    <!--Vital Signs section template-->
+                    <code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital signs" />
+                    <title>Vital Signs</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Body height</th>
+                                    <th>Body weight</th>
+                                    <th>Respiration Rate</th>
+                                    <th>Pulse</th>
+                                    <th>Systolic BP</th>
+                                    <th>Diastolic BP</th>
+                                    <th>Temperature</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2010-01-13T19:00:00Z</td>
+                                    <td>
+                                        <content ID="vital_1">170 cm</content>
+                                    </td>
+                                    <td>
+                                        <content ID="vital_2">92.8 kg</content>
+                                    </td>
+                                    <td>
+                                        <content ID="vital_3">17 /min</content>
+                                    </td>
+                                    <td>
+                                        <content ID="vital_4">80 /min</content>
+                                    </td>
+                                    <td>
+                                        <content ID="vital_5">110 mm[Hg]</content>
+                                    </td>
+                                    <td>
+                                        <content ID="vital_6">71 mm[Hg]</content>
+                                    </td>
+                                    <td>
+                                        <content ID="vital_7">36.7 Cel</content>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <organizer classCode="CLUSTER" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.10.20.1.32" assigningAuthorityName="CCD" />
+                            <templateId root="2.16.840.1.113883.10.20.1.35" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.1" assigningAuthorityName="IHE PCC" />
+                            <!--Vital signs organizer template-->
+                            <id root="C0A8F189-D8E5-4B5A-8C61-C86AB24511AF" />
+                            <code code="46680005" codeSystem="2.16.840.1.113883.6.96" displayName="Vital signs" codeSystemName="SNOMED CT" />
+                            <statusCode code="completed" />
+                            <effectiveTime value="20100113190000" />
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.14" assigningAuthorityName="HITSP/C83" />
+                                    <!--Result observation template-->
+                                    <id root="CE970BCC-9448-475C-8509-C249771F09BF" />
+                                    <code code="8302-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Body height" />
+                                    <text>
+                                        <reference value="#vital_1" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20100113190000" />
+                                    <value xsi:type="PQ" value="170" unit="cm" />
+                                </observation>
+                            </component>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.14" assigningAuthorityName="HITSP/C83" />
+                                    <!--Result observation template-->
+                                    <id root="EFA28959-4A67-438F-8D60-FBE793AC30F1" />
+                                    <code code="3141-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Body weight" />
+                                    <text>
+                                        <reference value="#vital_2" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20100113190000" />
+                                    <value xsi:type="PQ" value="92.8" unit="kg" />
+                                </observation>
+                            </component>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.14" assigningAuthorityName="HITSP/C83" />
+                                    <!--Result observation template-->
+                                    <id root="7F0EBC73-29E7-4649-80A2-4E9766B0EB3A" />
+                                    <code code="9279-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="RESPIRATION RATE" />
+                                    <text>
+                                        <reference value="#vital_3" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20100113190000" />
+                                    <value xsi:type="PQ" value="17" unit="/min" />
+                                </observation>
+                            </component>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.14" assigningAuthorityName="HITSP/C83" />
+                                    <!--Result observation template-->
+                                    <id root="4259CD34-3F8B-4945-873F-68792EBA8196" />
+                                    <code code="8867-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HEART BEAT" />
+                                    <text>
+                                        <reference value="#vital_4" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20100113190000" />
+                                    <value xsi:type="PQ" value="80" unit="/min" />
+                                </observation>
+                            </component>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.14" assigningAuthorityName="HITSP/C83" />
+                                    <!--Result observation template-->
+                                    <id root="4246E1E4-8C6A-4252-84F7-C19F4239B078" />
+                                    <code code="8480-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Systolic BP" />
+                                    <text>
+                                        <reference value="#vital_5" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20100113190000" />
+                                    <value xsi:type="PQ" value="110" unit="mm[Hg]" />
+                                </observation>
+                            </component>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.14" assigningAuthorityName="HITSP/C83" />
+                                    <!--Result observation template-->
+                                    <id root="7711AFCF-20B2-4EFF-89FC-08FDBA1273EB" />
+                                    <code code="8462-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diastolic BP" />
+                                    <text>
+                                        <reference value="#vital_6" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20100113190000" />
+                                    <value xsi:type="PQ" value="71" unit="mm[Hg]" />
+                                </observation>
+                            </component>
+                            <component>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.14" assigningAuthorityName="HITSP/C83" />
+                                    <!--Result observation template-->
+                                    <id root="5AA32CD1-14CB-44C6-82D2-447B457D1205" />
+                                    <code code="8310-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="BODY TEMPERATURE" />
+                                    <text>
+                                        <reference value="#vital_7" />
+                                    </text>
+                                    <statusCode code="completed" />
+                                    <effectiveTime value="20100113190000" />
+                                    <value xsi:type="PQ" value="36.7" unit="Cel" />
+                                </observation>
+                            </component>
+                        </organizer>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Encounters Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.3.88.11.83.127" assigningAuthorityName="HITSP C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.5.3.3" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.10.20.1.3" assigningAuthorityName="HL7 CCD" />
+                    <!--Encounters section template-->
+                    <code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters" />
+                    <title>Encounters</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Encounter</th>
+                                    <th>Performer</th>
+                                    <th>Location</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2010-01-13T19:00:00Z</td>
+                                    <td>
+                                        <content ID="encounter-1">Walk-In</content>
+                                    </td>
+                                    <td>Nicholas Roach MD</td>
+                                    <td>Riverside Medical Associates</td>
+                                    <td>
+                                        <content ID="encounter-note-1">s:pt presents with 3 weeks history of Hemorrhagic Stroke. pt is a 35 YO white female. o:Height 170 cm, Weight 92.8 kg, Temperature 36.7 C, Pulse 80, SystolicBP 110, DiastolicBP 71, Respiration 17 a:Hemorrhagic Stroke p:performed E/M Level 3 (established patient) - Completed, and prescribed protamine sulfate - 1 mg /90 units of heparin overdosage, and ordered CT Head, ECG.</content>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <encounter classCode="ENC" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.16" assigningAuthorityName="HITSP/C83" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.14" assigningAuthorityName="IHE PCC" />
+                            <templateId root="2.16.840.1.113883.10.20.1.21" assigningAuthorityName="HITSP/C83" />
+                            <!--Encounter activity template-->
+                            <id root="2.16.840.1.113883.4.450" extension="A0060453247021434647" />
+                            <code code="Ambulatory" displayName="Ambulatory" codeSystemName="ActEncounterCode" codeSystem="2.16.840.1.113883.5.4">
+                                <originalText>
+                                    <reference value="#encounter-1" />
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#encounter-note-1" />
+                            </text>
+                            <effectiveTime>
+                                <low value="20100113183000" />
+                                <high value="20100113190000" />
+                            </effectiveTime>
+                            <performer typeCode="PRF">
+                                <time>
+                                    <high value="20100113190000" />
+                                </time>
+                                <assignedEntity>
+                                    <id extension="369259082" root="2.16.840.1.113883.4.450" />
+                                    <addr use="WP">
+                                        <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                                        <city>Fairburn</city>
+                                        <state>GA</state>
+                                        <postalCode>30213</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-616-359-1654" use="WP" />
+                                    <assignedPerson>
+                                        <realmCode code="US" />
+                                        <name>
+                                            <given>Nicholas</given>
+                                            <family>Roach</family>
+                                            <suffix>MD</suffix>
+                                        </name>
+                                    </assignedPerson>
+                                    <representedOrganization>
+                                        <id nullFlavor="UNK" />
+                                        <name>Riverside Medical Associates</name>
+                                        <telecom use="WP" value="tel:+1-616-359-1654" />
+                                        <addr use="WP">
+                                            <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                                            <city>Fairburn</city>
+                                            <state>GA</state>
+                                            <postalCode>30213</postalCode>
+                                        </addr>
+                                    </representedOrganization>
+                                </assignedEntity>
+                            </performer>
+                            <participant typeCode="LOC">
+                                <participantRole classCode="SDLOC">
+                                    <addr use="WP">
+                                        <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                                        <city>Fairburn</city>
+                                        <state>GA</state>
+                                        <postalCode>30213</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-616-359-1654" use="WP" />
+                                    <playingEntity>
+                                        <name>Riverside Medical Associates</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                        </encounter>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Plan of Care-->
+                <section>
+                    <templateId root="2.16.840.1.113883.3.88.11.83.124" assigningAuthorityName="HITSP/C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.31" assigningAuthorityName="IHE PCC" />
+                    <templateId root="2.16.840.1.113883.10.20.2.7" assigningAuthorityName="HL7 CCD" />
+                    <templateId root="2.16.840.1.113883.10.20.1.10" assigningAuthorityName="HL7 CCD" />
+                    <!--Plan of Care section template-->
+                    <code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Treatment plan" />
+                    <title>Plan of Care</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Planned Activity</th>
+                                    <th>Planned Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <content ID="plannedlab-1">CT Head</content>
+                                    </td>
+                                    <td>2010-01-13T19:00:00Z</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="plannedlab-2">ECG</content>
+                                    </td>
+                                    <td>2010-01-13T19:00:00Z</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <content ID="planneddrug-1">protamine sulfate - 1 mg</content>
+                                    </td>
+                                    <td>2010-01-13T19:00:00Z</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <procedure classCode="OBS" moodCode="RQO">
+                            <templateId root="2.16.840.1.113883.10.20.1.25" assigningAuthorityName="CCD" />
+                            <!--Plan of Activity activity template-->
+                            <id root="454D6DC1-9DB1-4A90-80D2-9B3EF3154F77" />
+                            <code code="24725-4" displayName="CT Head" codeSystem="2.16.840.1.113883.6.103">
+                                <originalText>
+                                    <reference value="#plannedlab-1" />
+                                </originalText>
+                            </code>
+                            <statusCode code="new" />
+                            <effectiveTime>
+                                <center value="20100113190000" />
+                            </effectiveTime>
+                        </procedure>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <procedure classCode="OBS" moodCode="RQO">
+                            <templateId root="2.16.840.1.113883.10.20.1.25" assigningAuthorityName="CCD" />
+                            <!--Plan of Activity activity template-->
+                            <id root="A851A6BD-C1DC-470F-821E-EC519779095A" />
+                            <code code="34534-8" displayName="ECG" codeSystem="2.16.840.1.113883.6.103">
+                                <originalText>
+                                    <reference value="#plannedlab-2" />
+                                </originalText>
+                            </code>
+                            <statusCode code="new" />
+                            <effectiveTime>
+                                <center value="20100113190000" />
+                            </effectiveTime>
+                        </procedure>
+                    </entry>
+                    <entry>
+                        <substanceAdministration moodCode="INT" classCode="SBADM">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.8" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" assigningAuthorityName="IHE PCC" />
+                            <templateId root="2.16.840.1.113883.10.20.1.25" assigningAuthorityName="CCD" />
+                            <id root="C44859D8-BDDC-477E-804E-6DC639A8525E" />
+                            <statusCode code="completed" />
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20100113190000" />
+                                <high nullFlavor="UNK" />
+                            </effectiveTime>
+                            <doseQuantity value="1" unit="mg" />
+                            <consumable>
+                                <manufacturedProduct>
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.2" assigningAuthorityName="HITSP C83" />
+                                    <templateId root="2.16.840.1.113883.10.20.1.53" />
+                                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" assigningAuthorityName="IHE PCC" />
+                                    <manufacturedMaterial>
+                                        <code code="63323-229-30" displayName="protamine sulfate" codeSystemName="NDC" codeSystem="2.16.840.1.113883.6.69">
+                                            <originalText>
+                                                <reference value="#med-1" />
+                                            </originalText>
+                                        </code>
+                                        <name>protamine sulfate</name>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.3.88.11.83.8.1" />
+                                    <code code="73639000" displayName="Prescription Drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                                    <statusCode code="completed" />
+                                </observation>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                </section>
+            </component>
+            <component>
+                <!--Advance Directive Section-->
+                <section>
+                    <templateId root="2.16.840.1.113883.10.20.1.1" assigningAuthorityName="HL7 CCD" />
+                    <templateId root="2.16.840.1.113883.3.88.11.83.116" assigningAuthorityName="HITSP/C83" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.35" assigningAuthorityName="IHE PCC" />
+                    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.34" assigningAuthorityName="IHE PCC" />
+                    <code code="42348-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                    <title>Advance Directives</title>
+                    <text>
+                        <table border="1" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Directive</th>
+                                    <th>Description</th>
+                                    <th>Custodian</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>IV Fluid and Support</td>
+                                    <td>
+                                        <content ID="AdvDir_1">Do not IV Fluid and Support</content>
+                                    </td>
+                                    <td>Riverside Medical Associates</td>
+                                    <td>Supported By Healthcare Will</td>
+                                </tr>
+                                <tr>
+                                    <td>Intubation</td>
+                                    <td>
+                                        <content ID="AdvDir_2">Do Intubation</content>
+                                    </td>
+                                    <td>Riverside Medical Associates</td>
+                                    <td>Supported By Durable Power of Attorney for Healthcare</td>
+                                </tr>
+                                <tr>
+                                    <td>Resuscitation</td>
+                                    <td>
+                                        <content ID="AdvDir_3">Do not Resuscitation</content>
+                                    </td>
+                                    <td>Riverside Medical Associates</td>
+                                    <td>Current and verified</td>
+                                </tr>
+                                <tr>
+                                    <td>CPR</td>
+                                    <td>
+                                        <content ID="AdvDir_4">Do not CPR</content>
+                                    </td>
+                                    <td>Riverside Medical Associates</td>
+                                    <td>Verified With Family Only</td>
+                                </tr>
+                                <tr>
+                                    <td>Antibiotics</td>
+                                    <td>
+                                        <content ID="AdvDir_5">Do not Antibiotics</content>
+                                    </td>
+                                    <td>Riverside Medical Associates</td>
+                                    <td>Supported By Durable Power of Attorney for Healthcare</td>
+                                </tr>
+                                <tr>
+                                    <td>Life Support</td>
+                                    <td>
+                                        <content ID="AdvDir_6">Do Life Support</content>
+                                    </td>
+                                    <td>Riverside Medical Associates</td>
+                                    <td>Current and verified</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.12" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.17" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.7" assigningAuthorityName="IHE PCC" />
+                            <id root="3E32452E-405E-43CA-81EE-6BE0446E240C" />
+                            <!--Advance directive observation template-->
+                            <code code="225204009" displayName="IV Fluid and Support" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                <originalText>
+                                    <reference value="#AdvDir_1" />
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#AdvDir_1" />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime nullFlavor="UNK">
+                                <low nullFlavor="UNK" />
+                                <high nullFlavor="NA" />
+                            </effectiveTime>
+                            <value xsi:type="BL" value="false" />
+                            <participant typeCode="CST">
+                                <participantRole classCode="AGNT">
+                                    <addr use="WP">
+                                        <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                                        <city>Fairburn</city>
+                                        <state>GA</state>
+                                        <postalCode>30213</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-616-359-1654" use="WP" />
+                                    <playingEntity>
+                                        <name>Riverside Medical Associates</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.37" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="425394002" codeSystem="2.16.840.1.113883.6.96" displayName="Supported By Healthcare Will" />
+                                </observation>
+                            </entryRelationship>
+                        </observation>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.12" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.17" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.7" assigningAuthorityName="IHE PCC" />
+                            <id root="C142836A-23D4-4203-8D1D-86EB84734F0E" />
+                            <!--Advance directive observation template-->
+                            <code code="52765003" displayName="Intubation" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                <originalText>
+                                    <reference value="#AdvDir_2" />
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#AdvDir_2" />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime nullFlavor="UNK">
+                                <low nullFlavor="UNK" />
+                                <high nullFlavor="NA" />
+                            </effectiveTime>
+                            <value xsi:type="BL" value="true" />
+                            <participant typeCode="CST">
+                                <participantRole classCode="AGNT">
+                                    <addr use="WP">
+                                        <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                                        <city>Fairburn</city>
+                                        <state>GA</state>
+                                        <postalCode>30213</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-616-359-1654" use="WP" />
+                                    <playingEntity>
+                                        <name>Riverside Medical Associates</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.37" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="425393008" codeSystem="2.16.840.1.113883.6.96" displayName="Supported By Durable Power of Attorney for Healthcare" />
+                                </observation>
+                            </entryRelationship>
+                        </observation>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.12" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.17" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.7" assigningAuthorityName="IHE PCC" />
+                            <id root="F24A1486-9CDB-492B-8F42-98EAE262DBB1" />
+                            <!--Advance directive observation template-->
+                            <code code="304251008" displayName="Resuscitation" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                <originalText>
+                                    <reference value="#AdvDir_3" />
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#AdvDir_3" />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime nullFlavor="UNK">
+                                <low nullFlavor="UNK" />
+                                <high nullFlavor="NA" />
+                            </effectiveTime>
+                            <value xsi:type="BL" value="false" />
+                            <participant typeCode="CST">
+                                <participantRole classCode="AGNT">
+                                    <addr use="WP">
+                                        <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                                        <city>Fairburn</city>
+                                        <state>GA</state>
+                                        <postalCode>30213</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-616-359-1654" use="WP" />
+                                    <playingEntity>
+                                        <name>Riverside Medical Associates</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.37" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="425392003" codeSystem="2.16.840.1.113883.6.96" displayName="Current and verified" />
+                                </observation>
+                            </entryRelationship>
+                        </observation>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.12" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.17" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.7" assigningAuthorityName="IHE PCC" />
+                            <id root="AF78820D-82C2-4529-8455-72AD294FF22E" />
+                            <!--Advance directive observation template-->
+                            <code code="89666000" displayName="CPR" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                <originalText>
+                                    <reference value="#AdvDir_4" />
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#AdvDir_4" />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime nullFlavor="UNK">
+                                <low nullFlavor="UNK" />
+                                <high nullFlavor="NA" />
+                            </effectiveTime>
+                            <value xsi:type="BL" value="false" />
+                            <participant typeCode="CST">
+                                <participantRole classCode="AGNT">
+                                    <addr use="WP">
+                                        <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                                        <city>Fairburn</city>
+                                        <state>GA</state>
+                                        <postalCode>30213</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-616-359-1654" use="WP" />
+                                    <playingEntity>
+                                        <name>Riverside Medical Associates</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.37" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="425396000" codeSystem="2.16.840.1.113883.6.96" displayName="Verified With Family Only" />
+                                </observation>
+                            </entryRelationship>
+                        </observation>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.12" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.17" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.7" assigningAuthorityName="IHE PCC" />
+                            <id root="1C92B9E5-BB4E-465C-8B08-7B7C5D7143A0" />
+                            <!--Advance directive observation template-->
+                            <code code="281789004" displayName="Antibiotics" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                <originalText>
+                                    <reference value="#AdvDir_5" />
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#AdvDir_5" />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime nullFlavor="UNK">
+                                <low nullFlavor="UNK" />
+                                <high nullFlavor="NA" />
+                            </effectiveTime>
+                            <value xsi:type="BL" value="false" />
+                            <participant typeCode="CST">
+                                <participantRole classCode="AGNT">
+                                    <addr use="WP">
+                                        <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                                        <city>Fairburn</city>
+                                        <state>GA</state>
+                                        <postalCode>30213</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-616-359-1654" use="WP" />
+                                    <playingEntity>
+                                        <name>Riverside Medical Associates</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.37" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="425393008" codeSystem="2.16.840.1.113883.6.96" displayName="Supported By Durable Power of Attorney for Healthcare" />
+                                </observation>
+                            </entryRelationship>
+                        </observation>
+                    </entry>
+                    <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="2.16.840.1.113883.3.88.11.83.12" assigningAuthorityName="HITSP C83" />
+                            <templateId root="2.16.840.1.113883.10.20.1.17" assigningAuthorityName="CCD" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.7" assigningAuthorityName="IHE PCC" />
+                            <id root="194B41BD-7F4C-4190-8A73-8E88B9E1F54E" />
+                            <!--Advance directive observation template-->
+                            <code code="78823007" displayName="Life Support" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                                <originalText>
+                                    <reference value="#AdvDir_6" />
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#AdvDir_6" />
+                            </text>
+                            <statusCode code="completed" />
+                            <effectiveTime nullFlavor="UNK">
+                                <low nullFlavor="UNK" />
+                                <high nullFlavor="NA" />
+                            </effectiveTime>
+                            <value xsi:type="BL" value="true" />
+                            <participant typeCode="CST">
+                                <participantRole classCode="AGNT">
+                                    <addr use="WP">
+                                        <streetAddressLine>1079 Vail Drive</streetAddressLine>
+                                        <city>Fairburn</city>
+                                        <state>GA</state>
+                                        <postalCode>30213</postalCode>
+                                    </addr>
+                                    <telecom value="tel:+1-616-359-1654" use="WP" />
+                                    <playingEntity>
+                                        <name>Riverside Medical Associates</name>
+                                    </playingEntity>
+                                </participantRole>
+                            </participant>
+                            <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="2.16.840.1.113883.10.20.1.37" />
+                                    <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status" />
+                                    <statusCode code="completed" />
+                                    <value xsi:type="CE" code="425392003" codeSystem="2.16.840.1.113883.6.96" displayName="Current and verified" />
+                                </observation>
+                            </entryRelationship>
+                        </observation>
+                    </entry>
+                </section>
+            </component>
+        </structuredBody>
+    </component>
+</ClinicalDocument>
