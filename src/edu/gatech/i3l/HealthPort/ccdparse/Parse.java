@@ -45,11 +45,11 @@ public class Parse {
 		    	try {
 		            JSONObject xmlJSONObj = XML.toJSONObject(new String(Files.readAllBytes(Paths.get("src/resources/"+f.getName()))));
 		            
-		            DBOps.populateDatabase("OMOP", "person", xmlJSONObj);
-		            DBOps.populateDatabase("OMOP", "condition_occurrence", xmlJSONObj);
-		            DBOps.populateDatabase("OMOP", "drug_exposure", xmlJSONObj);
-		            DBOps.populateDatabase("OMOP", "observation", xmlJSONObj);
-		            
+		            //DBOps.populateDatabase("OMOP", "person", xmlJSONObj);
+		            //DBOps.populateDatabase("OMOP", "condition_occurrence", xmlJSONObj);
+		            //DBOps.populateDatabase("OMOP", "drug_exposure", xmlJSONObj);
+		            //DBOps.populateDatabase("OMOP", "observation", xmlJSONObj);
+		            DBOps.populateDatabase("HealthPort", "user", xmlJSONObj);
 		            //System.out.println("Name: " + SyntheticEHR.getPatientName(xmlJSONObj).getClass());
 		            //System.out.println("Date: " + SyntheticEHR.getObsDate(xmlJSONObj)); 
 		            

@@ -2,8 +2,8 @@ package edu.gatech.i3l.HealthPort.ccdparse;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+//import java.sql.PreparedStatement;
+//import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -34,7 +34,6 @@ public class DBOps {
 		    String sql = "CREATE DATABASE " + dbName;
 		    stmt.executeUpdate(sql);
 		} catch (SQLException se) {
-			// TODO Auto-generated catch block
 			se.printStackTrace();
 		}catch(Exception e){
 		      //Handle errors for Class.forName
@@ -67,7 +66,6 @@ public class DBOps {
 		    String sql = "DROP DATABASE " + dbName;
 		    stmt.executeUpdate(sql);
 		} catch (SQLException se) {
-			// TODO Auto-generated catch block
 			se.printStackTrace();
 		}catch(Exception e){
 		      //Handle errors for Class.forName
@@ -97,100 +95,102 @@ public class DBOps {
 			String URL = url + "/" + dbName;
 			conn = DriverManager.getConnection(URL, username, password);
 			stmt = conn.createStatement();
-			
-		    if (tableName.equals("person")){//USER
-		    	String name = "'" + SyntheticEHR.getPatientName(xmlJSONObj) + "'";
-		    	//String race = "'" + SyntheticEHR.getPatientRace(xmlJSONObj) + "'";
-				String sql = "INSERT INTO person " +
-			    		"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + name + ", " + SyntheticEHR.getPatientGenderID(xmlJSONObj) + ", " + SyntheticEHR.getBirthYear(xmlJSONObj) + ", " + SyntheticEHR.getBirthMonth(xmlJSONObj)  + ", " + SyntheticEHR.getBirthDay(xmlJSONObj)  + ", null, null)";
-				stmt.executeUpdate(sql);
-			}
-			else if (tableName.equals("condition_occurrence")){//CONDITION
-				//String sql = "INSERT INTO condition_occurrence (person_id, condition_id, condition_start_date, condition_end_date, condition_name, stop_reason)" + 
-			    		//"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + SyntheticEHR.getCond(xmlJSONObj) + ", " + SyntheticEHR.getCondStart(xmlJSONObj) + ", " + SyntheticEHR.getCondEnd(xmlJSONObj)  + ", " + SyntheticEHR.getCondSID(xmlJSONObj) + ", null, null, null, null, null)";//, null, null, null, null, null, null, null, null)";
-				String[] cond = SyntheticEHR.getCond(xmlJSONObj);
-				for (int i = 0; i < cond.length; i++){
-					if (cond[i] != null){
-						String[] data = cond[i].split("\\|");
-						String condID = "'" + data[0] + "'";
-						String condStart = "'" + data[2] + "'";
-						String condName = "'" + data[1] + "'";
-						String condEnd = "'N/A'";
-						String sql = "INSERT INTO condition_occurrence (person_id, condition_id, condition_start_date, condition_end_date, condition_name, stop_reason)" +
-								"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + condID + ", " + condStart + ", " + condEnd + ", " + condName + ", null)";
-						stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);	
-					}
-					
+			if (dbName.equals("OMOP")){
+				if (tableName.equals("person")){//USER
+			    	String name = "'" + SyntheticEHR.getPatientName(xmlJSONObj) + "'";
+			    	//String race = "'" + SyntheticEHR.getPatientRace(xmlJSONObj) + "'";
+					String sql = "INSERT INTO person " +
+				    		"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + name + ", " + SyntheticEHR.getPatientGenderID(xmlJSONObj) + ", " + SyntheticEHR.getBirthYear(xmlJSONObj) + ", " + SyntheticEHR.getBirthMonth(xmlJSONObj)  + ", " + SyntheticEHR.getBirthDay(xmlJSONObj)  + ", null, null)";
+					stmt.executeUpdate(sql);
 				}
-					
-			}
-			else if (tableName.equals("drug_exposure")){//MEDICATION
-				//String sql = "INSERT INTO drug_exposure (person_id, drug_concept_id, drug_exposure_start_date, drug_exposure_end_date, drug_type_concept_id, drug_dose_quantity, drug_source_value) " + 
-			    		//"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + SyntheticEHR.getDrugID(xmlJSONObj) + ", " + SyntheticEHR.getDrugStart(xmlJSONObj) + ", " + SyntheticEHR.getDrugEnd(xmlJSONObj)  + ", null, " + SyntheticEHR.getDrugDose(xmlJSONObj) + ", " + SyntheticEHR.getDrugName(xmlJSONObj) + ")";//, null, null, null, null, null, null, null, null)";
-				//stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
-				String[] med = SyntheticEHR.getMeds(xmlJSONObj);
-				for (int i = 0; i < med.length; i++){
-					if (med[i] != null){
-						String[] data = med[i].split("\\|");
-						String drugID = "'" + data[0] + "'";
-						String drugName = "'" + data[1] + "'";
-						String drugStatus = "'" + data[2] + "'";
-						String drugStart = "'" + data[3] + "'";
-						String drugDosage = "'" + data[4] + " " + data[5] + "'";
-						String sql = "INSERT INTO drug_exposure (person_id, drug_id, drug_name, drug_dosage, last_filled_date, status)" +
-								"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + drugID + ", " + drugName + ", " + drugDosage + ", " + drugStart + "," +  drugStatus + ")";
-						stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);	
-					}
-					
-				}
-			}
-			else if (tableName.equals("observation")){//OBSERVATION
-				String[] obs = SyntheticEHR.getObs(xmlJSONObj);
-				for (int i = 0; i < obs.length; i++){
-					if (obs[i] != null){
-						String[] data = obs[i].split("\\|");
-						if (data.length > 1){
-							String obsDate = "'" + String.valueOf(data[0]).substring(0, 10) + "'";
-							String obsTime = "'" + String.valueOf(data[0]).substring(11,19) + "'";
-							String height = "'" + data[1] + "'";
-							String weight = "'" + data[2] + "'";
-							String respRate = "'" + data[3] + "'";
-							String Pulse = "'" + data[4] + "'";
-							String SysBP = "'" + data[5] + "'";
-							String DiaBP = "'" + data[6] + "'";
-							String Temp = "'" + data[7] + "'";
-							String heightID = "'8302-2'";
-							String weightID = "'3141-9'";
-							String respRateID = "'9279-1'";
-							String pulseID = "'8867-4'";
-							String sysBPID = "'8480-6'";
-							String diaBPID = "'8462-4'";
-							String tempID = "'8310-5'";
-							String sql = "INSERT INTO observation (person_id, observation_concept_id, observation_date, observation_time, observation_value)" +
-									"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + heightID + ", " + obsDate + ", " + obsTime + "," + height + ")";
+				else if (tableName.equals("condition_occurrence")){//CONDITION
+					//String sql = "INSERT INTO condition_occurrence (person_id, condition_id, condition_start_date, condition_end_date, condition_name, stop_reason)" + 
+				    		//"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + SyntheticEHR.getCond(xmlJSONObj) + ", " + SyntheticEHR.getCondStart(xmlJSONObj) + ", " + SyntheticEHR.getCondEnd(xmlJSONObj)  + ", " + SyntheticEHR.getCondSID(xmlJSONObj) + ", null, null, null, null, null)";//, null, null, null, null, null, null, null, null)";
+					String[] cond = SyntheticEHR.getCond(xmlJSONObj);
+					for (int i = 0; i < cond.length; i++){
+						if (cond[i] != null){
+							String[] data = cond[i].split("\\|");
+							String condID = "'" + data[0] + "'";
+							String condStart = "'" + data[2] + "'";
+							String condName = "'" + data[1] + "'";
+							String condEnd = "'N/A'";
+							String sql = "INSERT INTO condition_occurrence (person_id, condition_id, condition_start_date, condition_end_date, condition_name, stop_reason)" +
+									"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + condID + ", " + condStart + ", " + condEnd + ", " + condName + ", null)";
 							stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);	
-							sql = "INSERT INTO observation (person_id, observation_concept_id, observation_date, observation_time, observation_value)" +
-									"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + weightID + ", " + obsDate + ", " + obsTime + "," + weight + ")";
-							stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
-							sql = "INSERT INTO observation (person_id, observation_concept_id, observation_date, observation_time, observation_value)" +
-									"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + respRateID + ", " + obsDate + ", " + obsTime + "," + respRate + ")";
-							stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
-							sql = "INSERT INTO observation (person_id, observation_concept_id, observation_date, observation_time, observation_value)" +
-									"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + pulseID + ", " + obsDate + ", " + obsTime + "," + Pulse + ")";
-							stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
-							sql = "INSERT INTO observation (person_id, observation_concept_id, observation_date, observation_time, observation_value)" +
-									"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + sysBPID + ", " + obsDate + ", " + obsTime + "," + SysBP + ")";
-							stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
-							sql = "INSERT INTO observation (person_id, observation_concept_id, observation_date, observation_time, observation_value)" +
-									"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + diaBPID + ", " + obsDate + ", " + obsTime + "," + DiaBP + ")";
-							stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
-							sql = "INSERT INTO observation (person_id, observation_concept_id, observation_date, observation_time, observation_value)" +
-									"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + tempID + ", " + obsDate + ", " + obsTime + "," + Temp + ")";
-							stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
 						}
+						
 					}
-					
+						
 				}
+				else if (tableName.equals("drug_exposure")){//MEDICATION
+					//String sql = "INSERT INTO drug_exposure (person_id, drug_concept_id, drug_exposure_start_date, drug_exposure_end_date, drug_type_concept_id, drug_dose_quantity, drug_source_value) " + 
+				    		//"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + SyntheticEHR.getDrugID(xmlJSONObj) + ", " + SyntheticEHR.getDrugStart(xmlJSONObj) + ", " + SyntheticEHR.getDrugEnd(xmlJSONObj)  + ", null, " + SyntheticEHR.getDrugDose(xmlJSONObj) + ", " + SyntheticEHR.getDrugName(xmlJSONObj) + ")";//, null, null, null, null, null, null, null, null)";
+					//stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+					String[] med = SyntheticEHR.getMeds(xmlJSONObj);
+					for (int i = 0; i < med.length; i++){
+						if (med[i] != null){
+							String[] data = med[i].split("\\|");
+							String drugID = "'" + data[0] + "'";
+							String drugName = "'" + data[1] + "'";
+							String drugStatus = "'" + data[2] + "'";
+							String drugStart = "'" + data[3] + "'";
+							String drugDosage = "'" + data[4] + " " + data[5] + "'";
+							String sql = "INSERT INTO drug_exposure (person_id, drug_id, drug_name, drug_dosage, last_filled_date, status)" +
+									"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + drugID + ", " + drugName + ", " + drugDosage + ", " + drugStart + "," +  drugStatus + ")";
+							stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);	
+						}
+						
+					}
+				}
+				else if (tableName.equals("observation")){//OBSERVATION
+					String[] obs = SyntheticEHR.getObs(xmlJSONObj);
+					for (int i = 0; i < obs.length; i++){
+						if (obs[i] != null){
+							String[] data = obs[i].split("\\|");
+							if (data.length > 1){
+								String obsDate = "'" + String.valueOf(data[0]).substring(0, 10) + "'";
+								String obsTime = "'" + String.valueOf(data[0]).substring(11,19) + "'";
+								String height = "'" + data[1] + "'";
+								String weight = "'" + data[2] + "'";
+								String respRate = "'" + data[3] + "'";
+								String Pulse = "'" + data[4] + "'";
+								String SysBP = "'" + data[5] + "'";
+								String DiaBP = "'" + data[6] + "'";
+								String Temp = "'" + data[7] + "'";
+								String heightID = "'8302-2'";
+								String weightID = "'3141-9'";
+								String respRateID = "'9279-1'";
+								String pulseID = "'8867-4'";
+								String sysBPID = "'8480-6'";
+								String diaBPID = "'8462-4'";
+								String tempID = "'8310-5'";
+								String sql = "INSERT INTO observation (person_id, observation_concept_id, observation_date, observation_time, observation_value)" +
+										"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + heightID + ", " + obsDate + ", " + obsTime + "," + height + ")";
+								stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);	
+								sql = "INSERT INTO observation (person_id, observation_concept_id, observation_date, observation_time, observation_value)" +
+										"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + weightID + ", " + obsDate + ", " + obsTime + "," + weight + ")";
+								stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+								sql = "INSERT INTO observation (person_id, observation_concept_id, observation_date, observation_time, observation_value)" +
+										"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + respRateID + ", " + obsDate + ", " + obsTime + "," + respRate + ")";
+								stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+								sql = "INSERT INTO observation (person_id, observation_concept_id, observation_date, observation_time, observation_value)" +
+										"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + pulseID + ", " + obsDate + ", " + obsTime + "," + Pulse + ")";
+								stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+								sql = "INSERT INTO observation (person_id, observation_concept_id, observation_date, observation_time, observation_value)" +
+										"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + sysBPID + ", " + obsDate + ", " + obsTime + "," + SysBP + ")";
+								stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+								sql = "INSERT INTO observation (person_id, observation_concept_id, observation_date, observation_time, observation_value)" +
+										"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + diaBPID + ", " + obsDate + ", " + obsTime + "," + DiaBP + ")";
+								stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+								sql = "INSERT INTO observation (person_id, observation_concept_id, observation_date, observation_time, observation_value)" +
+										"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + tempID + ", " + obsDate + ", " + obsTime + "," + Temp + ")";
+								stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+							}
+						}
+						
+					}
+			}
+		    
 				//String height = "'" + SyntheticEHR.getHeight(xmlJSONObj)  + "'";
 				//String heightID = "'8302-2'"; 
 				//String ObsDate = "'" + SyntheticEHR.getObsDate(xmlJSONObj) + "'";
@@ -198,6 +198,16 @@ public class DBOps {
 			    		//"values (" + SyntheticEHR.getPatientID(xmlJSONObj) + ", " + heightID + ", " + ObsDate + ", null, " + height  + ")";//, null, null, null, null, null, null, null, null)";
 				//stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
 				
+			}
+			else if (dbName.equals("HealthPort")){
+				if (tableName.equals("user")){
+					String personID = "'" + SyntheticEHR.getPatientID(xmlJSONObj) + "'";
+					//String recordID = "'" + SyntheticEHR.getPatientID(xmlJSONObj) + "'";
+					String name = "'" + SyntheticEHR.getPatientName(xmlJSONObj) + "'";
+					String sql = "INSERT INTO user (name, organizationid, recordid, personid, gender, contact, address)" +
+				    		"values (" + name + ", 3, null, " + personID + ", null, null, null)";
+					stmt.executeUpdate(sql);
+				}
 			}
 		    
 		} catch (SQLException se) {
