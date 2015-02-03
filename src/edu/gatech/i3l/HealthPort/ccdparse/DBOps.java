@@ -3,7 +3,7 @@ package edu.gatech.i3l.HealthPort.ccdparse;
 import java.sql.Connection;
 import java.sql.DriverManager;
 //import java.sql.PreparedStatement;
-//import java.sql.ResultSet;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -12,8 +12,8 @@ import org.json.JSONObject;
 public class DBOps {
 	static final String serverName = "localhost";
 	static final String url = "jdbc:mysql://" + serverName;
-	static final String username = "root";
-	static final String password = "a";
+	static final String username = "healthport";
+	static final String password = "i3lworks";
     
 	public static void connect(String refresh){
 		if (refresh.equals("True")){
@@ -233,4 +233,67 @@ public class DBOps {
 		
 	}
 
+	public static void getInfo(String dbName, String tableName) throws ClassNotFoundException{
+		String driverName = "org.gjt.mm.mysql.Driver";			    
+	    Connection conn = null;
+	    Statement stmt = null;
+	    String personID = "1115068670";
+	    String recordID = "'8302-2'";
+	    try {
+			Class.forName(driverName);
+			String URL = url + "/" + dbName;
+			conn = DriverManager.getConnection(URL, username, password);
+			stmt = conn.createStatement();
+			if (dbName.equals("OMOP")){
+				if (tableName.equals("observation")){
+					String sql = "SELECT observation_value FROM observation WHERE person_id= " + personID + " and observation_concept_id= " + recordID;
+					ResultSet rs = stmt.executeQuery(sql);
+				      //STEP 5: Extract data from result set
+				      while(rs.next()){
+				         //Retrieve by column name
+				         //String obsID = rs.getString("observation_concept_id");
+				         String obsVal = rs.getString("observation_value");
+
+				         //Display values
+				         //System.out.println(", ID: " + obsID);
+				         System.out.println(", Val: " + obsVal);
+				      }
+				}
+			}
+		} catch (SQLException se) {
+			// TODO Auto-generated catch block
+			se.printStackTrace();
+			}
+	}
+	
+	public static void getStats(String dbName, String tableName){
+		//String driverName = "org.gjt.mm.mysql.Driver";			    
+	    Connection conn = null;
+	    Statement stmt = null;
+	    try {
+			//Class.forName(driverName);
+			String URL = url + "/" + dbName;
+			conn = DriverManager.getConnection(URL, username, password);
+			stmt = conn.createStatement();
+			if (dbName.equals("OMOP")){
+				if (tableName.equals("condition_occurrence")){
+					String sql = "SELECT COUNT(DISTINCT condition_id) FROM " + tableName;
+					ResultSet rs = stmt.executeQuery(sql);
+				      //STEP 5: Extract data from result set
+				      while(rs.next()){
+				         //Retrieve by column name
+				         //String obsID = rs.getString("observation_concept_id");
+				         int count = rs.getInt(1);
+
+				         //Display values
+				         //System.out.println(", ID: " + obsID);
+				         System.out.println(count);
+				      }
+				}
+			}
+		} catch (SQLException se) {
+			// TODO Auto-generated catch block
+			se.printStackTrace();
+			}
+	}
 }

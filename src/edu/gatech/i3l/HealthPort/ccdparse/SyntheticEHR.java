@@ -209,6 +209,32 @@ public class SyntheticEHR {
 		NA[0] = "N/A";
 		return NA;
 	}
+	public static String[] getLabObs(JSONObject JSONCCD) throws JSONException{
+		JSONObject tempJSONObj = JSONCCD.getJSONObject("ClinicalDocument").getJSONObject("component").getJSONObject("structuredBody");
+		JSONArray temp = tempJSONObj.getJSONArray("component");
+		for (int i = 0; i < temp.length(); i++){
+			if (temp.getJSONObject(i).getJSONObject("section").get("title").equals("Results")){
+				String[] Obs = new String[50];
+				try{
+					JSONArray temp2 = temp.getJSONObject(i).getJSONObject("section").getJSONObject("text").getJSONObject("table").getJSONObject("tbody").getJSONArray("tr");
+					for (int j = 0; j < temp2.length(); j++){
+						JSONArray temp3 = temp2.getJSONObject(j).getJSONArray("td");
+						System.out.println(temp3.get(1));
+						Obs[j] = String.valueOf(temp3.get(0)) + "|" + String.valueOf(temp3.get(1)) + "|" + String.valueOf(temp3.get(2)) + "|" + String.valueOf(temp3.get(3)) + "|" + String.valueOf(temp3.get(4));		
+					}
+					return Obs;
+				}
+				catch (JSONException e){
+					JSONArray temp2 = temp.getJSONObject(i).getJSONObject("section").getJSONObject("text").getJSONObject("table").getJSONObject("tbody").getJSONObject("tr").getJSONArray("td");
+					Obs[0] = String.valueOf(temp2.getJSONObject(0).get("content")) + "|" + String.valueOf(temp2.getJSONObject(1).get("content")) + "|" + String.valueOf(temp2.get(2)) + "|" + String.valueOf(temp2.get(3)) + "|" + String.valueOf(temp2.get(4));
+					return Obs;
+				}
+			}	
+		}
+		String[] NA = new String[1];
+		NA[0] = "N/A";
+		return NA;
+	}
 	
 	public static String getCondSID(JSONObject JSONCCD) throws JSONException{
 		JSONObject tempJSONObj = JSONCCD.getJSONObject("ClinicalDocument").getJSONObject("component").getJSONObject("structuredBody");

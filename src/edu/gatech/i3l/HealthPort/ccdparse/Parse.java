@@ -39,6 +39,8 @@ public class Parse {
 
   	public static void main(String[] args) throws Exception {
   		//DBOps.connect("True");
+  		//DBOps.getStats("OMOP", "condition_occurrence");
+
 		File path = new File("src/resources"); //path to your folder. eg. C:\\P4logs
 		for(File f: path.listFiles()) { // this loops through all the files + directories
 		    if(f.isFile() && !f.isHidden()) { // checks if it is a file, not a directory  
@@ -49,18 +51,20 @@ public class Parse {
 		            //DBOps.populateDatabase("OMOP", "condition_occurrence", xmlJSONObj);
 		            //DBOps.populateDatabase("OMOP", "drug_exposure", xmlJSONObj);
 		            //DBOps.populateDatabase("OMOP", "observation", xmlJSONObj);
-		            DBOps.populateDatabase("HealthPort", "user", xmlJSONObj);
+		            //DBOps.populateDatabase("HealthPort", "user", xmlJSONObj);
+		            //DBOps.getInfo("OMOP", "observation");
+		            //DBOps.getStats("OMOP", "condition_occurrence");
 		            //System.out.println("Name: " + SyntheticEHR.getPatientName(xmlJSONObj).getClass());
 		            //System.out.println("Date: " + SyntheticEHR.getObsDate(xmlJSONObj)); 
 		            
-		            /*String [] cond = SyntheticEHR.getObs(xmlJSONObj);
-		            for (int i = 0 ; i< cond.length; i++){
-		            	if (cond[i] != null){
-		            		System.out.println("Cond: " + cond[i]);
+		            String [] lab = SyntheticEHR.getLabObs(xmlJSONObj);
+		            for (int i = 0 ; i< lab.length; i++){
+		            	if (lab[i] != null){
+		            		System.out.println("Lab: " + lab[i]);
 		            		//String[] data = cond[i].split("\\|");
 		            		//System.out.println(data[1]);
 		            	}	
-		            }*/
+		            }
 		            /*
 		            System.out.println("Height: " + SyntheticEHR.getHeight(xmlJSONObj));
 		            System.out.println("Systolic BP: " + SyntheticEHR.getSysBP(xmlJSONObj));
