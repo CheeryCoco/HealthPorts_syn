@@ -219,8 +219,18 @@ public class SyntheticEHR {
 					JSONArray temp2 = temp.getJSONObject(i).getJSONObject("section").getJSONObject("text").getJSONObject("table").getJSONObject("tbody").getJSONArray("tr");
 					for (int j = 0; j < temp2.length(); j++){
 						JSONArray temp3 = temp2.getJSONObject(j).getJSONArray("td");
-						System.out.println(temp3.get(1));
-						Obs[j] = String.valueOf(temp3.get(0)) + "|" + String.valueOf(temp3.get(1)) + "|" + String.valueOf(temp3.get(2)) + "|" + String.valueOf(temp3.get(3)) + "|" + String.valueOf(temp3.get(4));		
+						String content = null;
+						try{
+							JSONArray temp4 = temp3.getJSONArray(1);
+							//System.out.println(temp4.get(0));
+							for (int k = 0; j < temp4.length(); k++){
+								content = content + ";" + temp4.getJSONObject(k);
+							}
+						}
+						catch (JSONException e){
+							content = String.valueOf(temp3.getJSONObject(1).get("content"));
+						}
+						Obs[j] = String.valueOf(temp3.getJSONObject(0).get("content")) + "|" + content + "|" + String.valueOf(temp3.get(2)) + "|" + String.valueOf(temp3.get(3)) + "|" + String.valueOf(temp3.get(4));		
 					}
 					return Obs;
 				}
